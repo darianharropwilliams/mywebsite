@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const gameRoutes = require('./routes/games');
+// const gameRoutes = require('./routes/games');
 const blogRoutes = require('./routes/blog');
-const contactRoutes = require('./routes/contact');
+// const contactRoutes = require('./routes/contact');
 
 const app = express();
 
@@ -11,12 +11,12 @@ const app = express();
 app.use(bodyParser.json()); // For parsing application/json
 
 // Routes
-app.use('/api', gameRoutes);    // All game-related routes
+// app.use('/api', gameRoutes);    // All game-related routes
 app.use('/api', blogRoutes);    // All blog-related routes
-app.use('/api', contactRoutes); // For contact form and email handling
+// app.use('/api', contactRoutes); // For contact form and email handling
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost/yourdbname', {
+mongoose.connect('mongodb://localhost/blogDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
