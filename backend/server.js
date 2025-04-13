@@ -12,10 +12,23 @@ const app = express();
 // Middlewares
 app.use(bodyParser.json()); // For parsing application/json
 
+
+const rateLimit = require('express-rate-limit');
+
+const contactLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 1, // limit each IP to 1 request per window
+  message: { message: 'Too many messages sent. Please try again later.' },
+});
+
+
 // Routes
 // app.use('/api', gameRoutes);    // All game-related routes
 app.use('/api', blogRoutes);    // All blog-related routes
 app.use('/api', contactRoutes); // For contact form and email handling
+app.use('/api/contact', contactLimiter);
+
+
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost/blogDB', {

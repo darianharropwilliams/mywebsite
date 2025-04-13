@@ -5,20 +5,22 @@ import Skills from './pages/Skills.jsx';
 import Projects from './pages/Projects.jsx';
 import Blog from './pages/Blog.jsx';
 import FunGadgets from './pages/Gadgets.jsx';
-import Sidebar from './components/sidebar/Sidebar.jsx';  // Sidebar component for navigation
+import Topbar from './components/topbar/Topbar.jsx';  // Topbar component for navigation
+import Bottombar from './components/bottombar/Bottombar.jsx';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar />
+        <Topbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/bio" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/fun-gadgets" element={<FunGadgets />} />
+          <Route path="/demos" element={<FunGadgets />} />
         </Routes>
+        <Bottombar />
       </div>
     </Router>
   );

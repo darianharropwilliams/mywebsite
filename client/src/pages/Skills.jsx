@@ -3,8 +3,8 @@
 function Skills() {
     return (
       <div>
-        <h1>Welcome to the skills page.</h1>
-        <p>Here I will go over languages, libraries, tools, and frameworks I am familiar with.</p>
+        <h1>Welcome to my Bio!</h1>
+        <p>Here I will go over my skills, including languages, libraries, tools, and frameworks I am familiar with. I will also have sections on other interests.</p>
       </div>
     );
   }

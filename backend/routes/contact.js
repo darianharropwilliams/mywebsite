@@ -1,37 +1,83 @@
 const express = require('express');
-const nodemailer = require('nodemailer'); // Import Nodemailer
+const nodemailer = require('nodemailer');
+const axios = require('axios');
 const router = express.Router();
+require('dotenv').config();
 
 // Setup Nodemailer transporter
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
+console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "[HIDDEN]" : "undefined or empty");
+
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can use any other service like SendGrid, Mailgun, etc.
+  service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER, // Use environment variable for email
-    pass: process.env.EMAIL_PASS, // Use environment variable for password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
   tls: {
-    rejectUnauthorized: false  // Disable certificate validation (ONLY for local dev)
-  }
+    rejectUnauthorized: false, // Only for local dev
+  },
 });
 
 // POST route for the contact form
-router.post('/contact', (req, res) => {
-  const { email, subject, message } = req.body;
+router.post('/contact', async (req, res) => {
+  const { email, subject, message, website, captchaToken } = req.body;
+
+  // Honeypot spam check
+  if (website) {
+    console.warn("🚨 Honeypot triggered - likely spam bot");
+    return res.status(400).json({ message: "Spam detected." });
+  }
+
+  // Basic input validation
+  if (!email || !subject || !message || !email.includes('@')) {
+    return res.status(400).json({ message: "Invalid input." });
+  }
+
+  // CAPTCHA required
+  if (!captchaToken) {
+    return res.status(400).json({ message: "CAPTCHA required." });
+  }
+
+  // Verify reCAPTCHA token
+  try {
+    const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${captchaToken}`;
+    const captchaRes = await axios.post(verifyURL);
+
+    if (!captchaRes.data.success) {
+      console.warn("🚨 CAPTCHA failed:", captchaRes.data);
+      return res.status(403).json({ message: "CAPTCHA verification failed." });
+    }
+  } catch (error) {
+    console.error("CAPTCHA verification error:", error);
+    return res.status(500).json({ message: "Error verifying CAPTCHA." });
+  }
+
+  console.log("📬 CONTACT FORM DATA:", req.body);
 
   const mailOptions = {
-    from: email,
-    to: process.env.RECIPIENT_EMAIL, // Send to your email or any recipient
-    subject: subject,
-    text: message,
+    from: process.env.EMAIL_USER,
+    to: process.env.RECIPIENT_EMAIL,
+    replyTo: email,
+    subject: `Contact Form: ${subject}`,
+    text: `
+You received a new message from your website contact form:
+
+From: ${email}
+Subject: ${subject}
+
+Message:
+${message}
+    `,
   };
 
-  // Send email
+  // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
+      console.error("Error sending email:", error);
       return res.status(500).json({ message: 'Error sending email' });
     }
-    console.log('Email sent: ' + info.response);
+    console.log('✅ Email sent:', info.response);
     res.status(200).json({ message: 'Email sent successfully' });
   });
 });

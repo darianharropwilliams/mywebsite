@@ -1,9 +1,8 @@
-// src/pages/Home.js
 function Gadgets() {
     return (
       <div>
-        <h1>Welcome to the Gadgets page</h1>
-        <p>Here I will add tools and trinkets.</p>
+        <h1>Welcome to the Demos page</h1>
+        <p>Here you will be able to demo projects I have built from your browser!</p>
       </div>
     );
   }
