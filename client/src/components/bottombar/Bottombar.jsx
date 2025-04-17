@@ -11,7 +11,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Contactform from '../contactform/ContactForm';
 
 function Bottombar() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <Box

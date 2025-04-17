@@ -74,7 +74,7 @@ function Topbar() {
               label="Bio"
               items={[
                 { label: 'Overview', path: '/bio' },
-                { label: 'Timeline', path: '/' }
+                // { label: 'Timeline', path: '/' }
               ]}
             />
           </Grid>
@@ -83,7 +83,7 @@ function Topbar() {
               label="Projects"
               items={[
                 { label: 'Solo Projects', path: '/projects' },
-                { label: 'Group Projects', path: '/' }
+                // { label: 'Group Projects', path: '/' }
               ]}
             />
           </Grid>
@@ -92,7 +92,7 @@ function Topbar() {
               label="Blog"
               items={[
                 { label: 'All Posts', path: '/blog' },
-                { label: 'Tags', path: '/' }
+                // { label: 'Tags', path: '/' }
               ]}
             />
           </Grid>
@@ -106,7 +106,7 @@ function Topbar() {
             />
           </Grid>
 
-          {/* Spacer and search bar */}
+          {/* Spacer and search bar
           <Grid item xs />
           <Grid item>
             <TextField
@@ -121,7 +121,7 @@ function Topbar() {
                 )
               }}
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Toolbar>
     </AppBar>

@@ -80,7 +80,7 @@ function ContactForm() {
           </Button>
         </Stack>
         <ReCAPTCHA
-          sitekey="your_site_key_here"
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
           onChange={handleCaptchaChange}
         />
       </Stack>

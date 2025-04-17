@@ -1,11 +1,12 @@
+import content from '../data/demos.json';
+
 function Gadgets() {
-    return (
-      <div>
-        <h1>Welcome to the Demos page</h1>
-        <p>Here you will be able to demo projects I have built from your browser!</p>
-      </div>
-    );
-  }
-  
-  export default Gadgets;
-  
+  return (
+    <div>
+      <h1>{content.title}</h1>
+      <p>{content.description}</p>
+    </div>
+  );
+}
+
+export default Gadgets;

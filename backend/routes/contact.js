@@ -5,9 +5,6 @@ const router = express.Router();
 require('dotenv').config();
 
 // Setup Nodemailer transporter
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "[HIDDEN]" : "undefined or empty");
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -25,7 +22,7 @@ router.post('/contact', async (req, res) => {
 
   // Honeypot spam check
   if (website) {
-    console.warn("🚨 Honeypot triggered - likely spam bot");
+    console.warn("Honeypot triggered - likely spam bot");
     return res.status(400).json({ message: "Spam detected." });
   }
 
@@ -43,7 +40,6 @@ router.post('/contact', async (req, res) => {
   try {
     const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${captchaToken}`;
     const captchaRes = await axios.post(verifyURL);
-
     if (!captchaRes.data.success) {
       console.warn("🚨 CAPTCHA failed:", captchaRes.data);
       return res.status(403).json({ message: "CAPTCHA verification failed." });
@@ -77,7 +73,7 @@ ${message}
       console.error("Error sending email:", error);
       return res.status(500).json({ message: 'Error sending email' });
     }
-    console.log('✅ Email sent:', info.response);
+    console.log('Email sent:', info.response);
     res.status(200).json({ message: 'Email sent successfully' });
   });
 });
