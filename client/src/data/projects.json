@@ -1,5 +1,22 @@
 {
     "title": "Welcome to the projects page",
-    "description": "This is where I will speak about and demo projects I have worked on."
+    "description": "This is where I will speak about and demo projects I have worked on.",
+    "content":
+    [
+      {
+        "title": "CHIP-8 Emulator",
+        "summary": "Built a full emulator in C with a custom memory allocator and stack logic. Added debugging tools and plans to WebAssembly-port it for the website.",
+        "tech": ["C", "SDL2", "Emulation", "Low-level"],
+        "link": "https://github.com/yourusername/chip8",
+        "image": "/images/chip8.png"
+      },
+      {
+        "title": "Blog Platform",
+        "summary": "Full-stack MERN blog platform with Markdown editing, dynamic routing, and MongoDB persistence. Includes a contact form and user-friendly design.",
+        "tech": ["React", "Node.js", "MongoDB", "Express"],
+        "link": "https://yourdomain.com/blog",
+        "image": "/images/blog.png"
+      }
+    ]
   }
   

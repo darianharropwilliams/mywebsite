@@ -1,54 +1,86 @@
 .post-card {
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: white;
-    transition: transform 0.2s ease;
-  }
-  
-  .post-card:hover {
-    transform: translateY(-3px);
-  }
-  
-  .post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .author {
-    font-size: 0.9rem;
-    color: #999;
-    margin-top: -0.5rem;
-  }
-  
-  .snippet {
-    margin: 1rem 0;
-    color: #333;
-  }
-  
-  .read-more {
-    text-decoration: none;
-    color: #0077ff;
-    font-weight: bold;
-  }
-  
-  .delete-btn {
-    background: none;
-    border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
-    color: #cc0000;
-    transition: transform 0.2s;
-  }
-  
-  .delete-btn:hover {
-    transform: scale(1.2);
-  }
-  
-  .post-card form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: -0.5rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.edit-buttons button {
+  background-color: #0077ff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-buttons button:hover {
+  background-color: #005fcc;
+}
+
+.delete-btn,
+.edit-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.edit-btn:hover {
+  color: #0077ff;
+}
+
+.content-preview {
+  padding: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.content-preview p {
+  margin: 0.5rem 0;
+}

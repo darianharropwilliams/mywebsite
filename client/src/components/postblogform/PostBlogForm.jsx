@@ -1,29 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './PostBlogForm.css';
+import MarkdownInput from '../markdowninput/MarkdownInput.jsx'; // adjust path if needed
+
 
 function PostBlogForm({ onSubmit }) {
-  const [form, setForm] = useState({
-    title: '', author: '', content: '', tags: '', links: '', attachments: ''
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const [form, setForm] = useState({ title: '', author: '', content: '' });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    console.log("Submitting form:", form);
     if (!form.title || !form.author || !form.content) return;
-    onSubmit({
-      ...form,
-      tags: form.tags.split(',').map(tag => tag.trim()),
-      links: form.links.split(',').map(link => link.trim()),
-      attachments: form.attachments.split(',').map(file => file.trim()),
-    });
-    setForm({ title: '', author: '', content: '', tags: '', links: '', attachments: '' });
+    onSubmit({ ...form });
+    setForm({ title: '', author: '', content: '' });
   };
 
-
-  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const fullscreenBtn = document.querySelector('.button.button-type-fullscreen');
+      if (fullscreenBtn) {
+        fullscreenBtn.remove();
+        clearInterval(interval);
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <form className="post-form" onSubmit={handleFormSubmit}>
@@ -32,7 +32,7 @@ function PostBlogForm({ onSubmit }) {
         name="title"
         placeholder="Post Title"
         value={form.title}
-        onChange={handleChange}
+        onChange={(e) => setForm({ ...form, title: e.target.value })}
         required
       />
       <input
@@ -40,20 +40,16 @@ function PostBlogForm({ onSubmit }) {
         name="author"
         placeholder="Your Name"
         value={form.author}
-        onChange={handleChange}
+        onChange={(e) => setForm({ ...form, author: e.target.value })}
         required
       />
-      <textarea
-        name="content"
-        placeholder="Write your post here..."
-        rows={6}
+      <MarkdownInput
         value={form.content}
-        onChange={handleChange}
-        required
+        onChange={(md) => setForm((prev) => ({ ...prev, content: md }))}
       />
-      <input name="tags" placeholder="Tags (comma-separated)" value={form.tags} onChange={handleChange} />
-      <textarea name="links" placeholder="Relevant links (comma-separated URLs)" value={form.links} onChange={handleChange} />
-      <input name="attachments" placeholder="File URLs (optional, comma-separated)" value={form.attachments} onChange={handleChange} />
+
+
+
 
       <button type="submit">Publish</button>
     </form>

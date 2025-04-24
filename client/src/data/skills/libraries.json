@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Pandas",
+      "field": "Machine Learning",
+      "details": "Handled data cleaning, transformation, and analysis.",
+      "source": "ML coursework, self-study"
+    },
+    {
+      "title": "Scapy",
+      "field": "Cybersecurity",
+      "details": "Crafted and analyzed packets to understand network protocols.",
+      "source": "Cybersecurity labs"
+    },
+    {
+      "title": "Mongoose",
+      "field": "Backend",
+      "details": "Managed MongoDB models, schemas, and queries.",
+      "source": "Blog backend project"
+    }
+  ]
+  

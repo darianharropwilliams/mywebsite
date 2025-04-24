@@ -15,4 +15,11 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+  .post-card,
+  .post-form,
+  .blog-container,
+  .snippet,
+  .full-post,
+  .post-list {
+    text-align: left;
+  }

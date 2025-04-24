@@ -101,7 +101,7 @@ function Topbar() {
               label="Demos"
               items={[
                 { label: 'Project Demos', path: '/demos' },
-                { label: 'Games', path: '/' }
+                // { label: 'Games', path: '/' }
               ]}
             />
           </Grid>

@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Git",
+      "field": "Version Control",
+      "details": "Used to manage branches, resolve merge conflicts, and track project history.",
+      "source": "All personal and academic projects"
+    },
+    {
+      "title": "Docker",
+      "field": "Containerization",
+      "details": "Containerized full-stack apps and orchestrated with Docker Compose.",
+      "source": "Personal backend projects"
+    },
+    {
+      "title": "Linux CLI",
+      "field": "General",
+      "details": "Navigated systems, wrote bash scripts, and used Make, GCC, and other CLI tools.",
+      "source": "University coursework, emulator development"
+    }
+  ]
+  

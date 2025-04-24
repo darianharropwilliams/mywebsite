@@ -1,0 +1,21 @@
+[
+    {
+      "title": "React",
+      "field": "Web Development",
+      "details": "Built reusable components and implemented routing with React Router.",
+      "source": "Portfolio site, blog project"
+    },
+    {
+      "title": "Express.js",
+      "field": "Backend",
+      "details": "Created REST APIs and handled routing and middleware.",
+      "source": "Blog backend project"
+    },
+    {
+      "title": "Material UI",
+      "field": "Frontend Styling",
+      "details": "Built responsive UIs using component-based styling and layout tools.",
+      "source": "Portfolio website"
+    }
+  ]
+  
