@@ -1,22 +1,87 @@
 {
-    "title": "Welcome to the projects page",
-    "description": "This is where I will speak about and demo projects I have worked on.",
-    "content":
-    [
-      {
-        "title": "CHIP-8 Emulator",
-        "summary": "Built a full emulator in C with a custom memory allocator and stack logic. Added debugging tools and plans to WebAssembly-port it for the website.",
-        "tech": ["C", "SDL2", "Emulation", "Low-level"],
-        "link": "https://github.com/yourusername/chip8",
-        "image": "/images/chip8.png"
-      },
-      {
-        "title": "Blog Platform",
-        "summary": "Full-stack MERN blog platform with Markdown editing, dynamic routing, and MongoDB persistence. Includes a contact form and user-friendly design.",
-        "tech": ["React", "Node.js", "MongoDB", "Express"],
-        "link": "https://yourdomain.com/blog",
-        "image": "/images/blog.png"
-      }
-    ]
-  }
-  
+  "title": "Welcome to the projects page",
+  "description": "This is where I will speak about and demo projects I have worked on.",
+  "content": [
+    {
+      "slug": "personal-website",
+      "title": "Full-Stack Personal Website",
+      "summary": "A responsive MERN stack portfolio site that showcases my projects, technical blog posts, and interactive demos.",
+      "tech": ["React", "Node.js", "MongoDB", "Express", "CSS Modules", "JWT Auth"],
+      "image": "/logo512.png",
+      "date": "Ongoing",
+      "featured": true
+    },
+    {
+      "slug": "phishing-detection-llm",
+      "title": "Phishing Email Detection with LLMs",
+      "summary": "Built and evaluated a large language model (LLM)-based system to identify phishing emails using pre-labeled datasets from Virginia Tech and other sources.",
+      "tech": ["Python", "PyTorch", "LLaMa", "Gemma", "AI", "Cybersecurity"],
+      "image": "/logo512.png",
+      "date": "Fall 2023",
+      "featured": true
+    },
+    {
+      "slug": "vt-hps-website",
+      "title": "VT Human-Powered Submarine Website",
+      "summary": "Redesigned the VT HPS team's static site into a modern full-stack web app with better interactivity and CMS-like editing.",
+      "tech": ["React", "Node.js", "MongoDB", "JavaScript", "CSS"],
+      "image": "/logo512.png",
+      "date": "Spring 2024",
+      "featured": true
+    },
+    {
+      "slug": "chess-image-classifier",
+      "title": "Chess Piece Image Classifier",
+      "summary": "Built a deep learning classifier to recognize individual chess pieces from real-world images, achieving 91% accuracy through advanced augmentation and convolutional neural networks.",
+      "tech": ["Python", "PyTorch", "CNN", "Computer Vision", "Data Augmentation"],
+      "image": "/logo512.png",
+      "date": "Spring 2023",
+      "featured": false
+    },
+    {
+      "slug": "ai-interview-helper",
+      "title": "AI Interview Help Website",
+      "summary": "Full-stack hackathon project that used GPT-3.5 to simulate mock interviews and provide personalized feedback.",
+      "tech": ["React", "Java Spring", "MongoDB", "GPT-3.5", "Hackathon"],
+      "image": "/logo512.png",
+      "date": "Fall 2023 (Hackathon)",
+      "featured": true
+    },
+    {
+      "slug": "http-server-c",
+      "title": "HTTP 1.1 Server",
+      "summary": "Upgraded a C-based HTTP 1.0 server to fully support HTTP 1.1 with chunking, persistent connections, and caching.",
+      "tech": ["C", "Networking", "HTTP", "Docker"],
+      "image": "/logo512.png",
+      "date": "Fall 2023",
+      "featured": false
+    },
+    {
+      "slug": "dynamic-memory-allocator",
+      "title": "Dynamic Memory Allocator",
+      "summary": "Designed and optimized a custom C memory allocator with 16-bin segmented free lists, compact metadata, and real heap expansion via sbrk(), balancing speed and memory reuse under stress-testing conditions.",
+      "tech": ["C", "Memory Management", "Low-level Programming", "Data Structures", "Systems Programming"],
+      "image": "/logo512.png",
+      "date": "Spring 2024",
+      "featured": false
+    },
+    {
+      "slug": "threadpool-c",
+      "title": "Threadpool Library",
+      "summary": "Developed a lightweight threadpool in C that queues tasks and runs them in parallel across multiple threads.",
+      "tech": ["C", "Concurrency", "Threading"],
+      "image": "/logo512.png",
+      "date": "Fall 2023",
+      "featured": false
+    },
+    {
+      "slug": "custom-terminal-shell",
+      "title": "Custom Terminal Shell",
+      "summary": "Wrote a terminal shell in C that parses and executes commands with minimal latency and error handling.",
+      "tech": ["C", "Linux", "Systems Programming"],
+      "image": "/logo512.png",
+      "date": "Spring 2024",
+      "featured": false
+    }
+  ]
+}

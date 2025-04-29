@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import blogContent from '../data/blog.json';
+import blogContent from '../../data/blog.json';
 import './Blog.css';
-import PostBlogCard from '../components/postblogcard/PostBlogCard.jsx';
-import PostBlogForm from '../components/postblogform/PostBlogForm.jsx';
+import PostBlogCard from '../../components/postblogcard/PostBlogCard.jsx';
+import PostBlogForm from '../../components/postblogform/PostBlogForm.jsx';
 
 function Blog() {
   const [posts, setPosts] = useState([]);

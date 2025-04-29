@@ -1,39 +1,45 @@
-/* src/components/bottombar.css */
 .bottombar {
   position: fixed;
-  bottom: 0; /* Changed from top: 0 to bottom: 0 */
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
-  padding: 10px 0;
-  z-index: 1000;
+  background-color: var(--mui-background-paper, #fff); /* Material UI fallback */
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1200;
 }
 
-.bottombar ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.bottombar ul li {
-  margin: 0 15px;
-}
-
-.bottombar ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.bottombar ul li a:hover {
-  text-decoration: underline;
-}
-
-
-.App {
+.bottombar-toggle {
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px; /* add this */
+  background-color: #1976d2;
+  color: #fff;
+  padding: 8px 0;
+}
+
+.bottombar-button {
+  color: white;
+  text-transform: none;
+  display: inline-flex; /* ✅ make it shrink to fit contents */
+  align-items: center;
+  justify-content: center; /* ✅ center icon + text inside */
+  gap: 8px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* Optional hover effect for the button */
+.bottombar-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottombar-paper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
 }

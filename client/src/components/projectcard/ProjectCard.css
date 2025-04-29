@@ -1,52 +1,77 @@
 .project-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  
-  .project-content h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #1976d2;
-  }
-  
-  .project-summary {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .project-tag {
-    background-color: #1976d2;
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 5px;
-    font-size: 0.75rem;
-  }
-  
-  .project-link {
-    color: #1976d2;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Fill available column */
+  max-width: none; /* ❌ Remove 700px limit */
+  box-sizing: border-box; /* Important for responsive layouts */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1976d2;
+}
+
+.project-summary {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-tag {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+.project-title-link {
+  text-decoration: none;
+  color: #1976d2;
+}
+
+.project-title-link:hover {
+  text-decoration: underline;
+}
+
+.project-button-container {
+  margin-top: 1rem;
+}
+
+.project-link-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.project-link-button:hover {
+  background-color: #125ca1;
+}
+
+.external-icon {
+  margin-left: 0.5ch;
+  vertical-align: middle;
+}

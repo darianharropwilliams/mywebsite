@@ -1,0 +1,26 @@
+{
+    "title": "Custom Terminal Shell",
+    "summary": "Wrote a terminal shell in C that parses and executes commands with minimal latency and error handling.",
+    "tech": ["C", "Linux", "Systems Programming"],
+    "image": "/logo512.png",
+    "slug": "custom-terminal-shell",
+    "date": "Spring 2024",
+    "featured": false,
+    "description": {
+      "situation": "Unix-like shells are essential, but building one from scratch provides deep insight into system programming.",
+      "task": "I needed to implement a fully functional shell with command parsing, piping, and I/O redirection.",
+      "action": "Using C, I constructed a custom shell with its own tokenizer, execution engine, and process control logic.",
+      "result": "The final shell was lightweight, feature-rich, and helped solidify my understanding of OS-level abstractions."
+    },
+    "challenges": [
+      "Implementing complex input parsing (pipes, redirection, backgrounding).",
+      "Keeping command execution fast and minimal in system calls."
+    ],
+    "contributions": [
+      "Implemented parser for pipes, redirection, and command chaining.",
+      "Wrote job execution loop with signal handling and process control.",
+      "Benchmarked performance against standard shells for speed."
+    ],
+    "links": []
+  }
+  

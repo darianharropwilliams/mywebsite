@@ -1,21 +1,23 @@
 [
-    {
-      "title": "Wireshark",
-      "field": "Network Analysis",
-      "details": "Captured and interpreted packet data to understand network behavior.",
-      "source": "Cybersecurity course labs"
-    },
-    {
-      "title": "Metasploit",
-      "field": "Penetration Testing",
-      "details": "Simulated attacks to explore system vulnerabilities.",
-      "source": "Security labs and exercises"
-    },
-    {
-      "title": "TCPdump",
-      "field": "Network Monitoring",
-      "details": "Used terminal-based filters to inspect raw packet data.",
-      "source": "Cybersecurity exercises"
-    }
-  ]
-  
+  {
+    "title": "Wireshark",
+    "field": "Network Analysis",
+    "details": "Captured and interpreted packet data to understand network behavior.",
+    "source": "Cybersecurity course labs",
+    "link": "https://www.wireshark.org/"
+  },
+  {
+    "title": "Metasploit",
+    "field": "Penetration Testing",
+    "details": "Simulated attacks to explore system vulnerabilities.",
+    "source": "Security labs and exercises",
+    "link": "https://www.metasploit.com/"
+  },
+  {
+    "title": "TCPdump",
+    "field": "Network Monitoring",
+    "details": "Used terminal-based filters to inspect raw packet data.",
+    "source": "Cybersecurity exercises",
+    "link": "https://www.tcpdump.org/"
+  }
+]

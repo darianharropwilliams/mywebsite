@@ -38,6 +38,10 @@ mongoose.connect('mongodb://localhost/blogDB', {
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
+
+const projectRoutes = require('./routes/projectRoutes');
+app.use('/api', projectRoutes);
+
 // Start the server
 app.listen(5000, () => {
   console.log('Server running on http://localhost:5000');

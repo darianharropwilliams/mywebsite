@@ -1,8 +1,19 @@
 .project-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards on tablets */
   }
-  
+}
+
+@media (min-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards on large screens */
+  }
+}

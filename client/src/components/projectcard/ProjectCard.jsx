@@ -1,23 +1,45 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { preloadProject } from '../../utils/projectCache'; // 👈 preload helper
+import TechCard from '../techcard/TechCard'; // 👈 import TechCard
 import './ProjectCard.css';
 
-function ProjectCard({ title, summary, tech, link, image }) {
+function ProjectCard({ title, summary, tech, image, slug }) {
   return (
     <div className="project-card">
       {image && <img src={image} alt={title} className="project-image" />}
       <div className="project-content">
-        <h3>{title}</h3>
+        <h3>
+          <Link to={`/projects/${slug}`} className="project-title-link">
+            {title}
+          </Link>
+        </h3>
+
         <p className="project-summary">{summary}</p>
-        <div className="project-tags">
-          {tech.map((t, i) => (
-            <span key={i} className="project-tag">{t}</span>
-          ))}
-        </div>
-        {link && (
-          <a href={link} className="project-link" target="_blank" rel="noreferrer">
-            View Project
-          </a>
+
+        {/* Technologies */}
+        {tech && tech.length > 0 && (
+          <div className="project-tags">
+            {tech.map((t, i) => (
+              <TechCard
+                key={i}
+                name={typeof t === 'string' ? t : t.name}
+                url={typeof t === 'object' ? t.url : `https://www.google.com/search?q=${encodeURIComponent(t)}`}
+              />
+            ))}
+          </div>
         )}
+
+        {/* Visit Button */}
+        <div className="project-button-container">
+          <Link
+            to={`/projects/${slug}`}
+            className="project-link-button"
+            onMouseEnter={() => preloadProject(slug)} // 👈 preload API on hover
+          >
+            Visit
+          </Link>
+        </div>
       </div>
     </div>
   );

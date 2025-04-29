@@ -1,21 +1,23 @@
 [
-    {
-      "title": "JavaScript",
-      "field": "Web Development",
-      "details": "Used for dynamic interfaces, state management, and DOM manipulation.",
-      "source": "Personal website, blog project"
-    },
-    {
-      "title": "C",
-      "field": "Systems Programming",
-      "details": "Built custom malloc, threadpool, and CHIP-8 emulator.",
-      "source": "University coursework, personal projects"
-    },
-    {
-      "title": "Python",
-      "field": "Scripting",
-      "details": "Created CLI tools, scripts, and data preprocessors.",
-      "source": "Scripting projects, coursework"
-    }
-  ]
-  
+  {
+    "title": "JavaScript",
+    "field": "Web Development",
+    "details": "Used for dynamic interfaces, state management, and DOM manipulation.",
+    "source": "Personal website, blog project",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    "title": "Python",
+    "field": "Scripting",
+    "details": "Created CLI tools, scripts, and data preprocessors.",
+    "source": "Scripting projects, coursework",
+    "link": "https://www.python.org/"
+  },
+  {
+    "title": "C",
+    "field": "Systems Programming",
+    "details": "Built custom malloc, threadpool, and CHIP-8 emulator.",
+    "source": "University coursework, personal projects",
+    "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
+  }
+]

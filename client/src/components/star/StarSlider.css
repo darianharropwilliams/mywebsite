@@ -1,0 +1,86 @@
+.star-slider {
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.slider-content {
+  height: 260px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+}
+
+
+.star-card {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+.text-wrapper {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.arrow-controls {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrow-btn {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 0.3s;
+}
+
+.arrow-btn:hover {
+  color: #1976d2;
+}
+
+.star-card h4 {
+  color: #1976d2;
+  margin-top: 0;
+}
+
+.slider-dots {
+  margin-top: 1rem;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  background: #1976d2;
+}

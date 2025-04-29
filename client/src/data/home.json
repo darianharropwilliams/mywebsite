@@ -1,4 +1,90 @@
 {
-    "title": "Welcome to My Website!",
-    "description": "This is the home page where you can learn more about me!"
+  "title": "Welcome!",
+  "name": "I'm Darian Harrop-Williams",
+  "pride": "🦃 VT Hokie · 🐾 PVCC Panther",
+  "pitch": "I build systems that work, defend networks that matter, and keep learning along the way.",
+  "bio": "I've always been an engineer, from building Lego robots to coding systems from scratch. Whether it's a trail, a project, or a challenge, I’m drawn to solving it one step at a time.",
+  "tags": [
+    {
+      "label": "Computer Science",
+      "type": "primary"
+    }
+  ],
+  "interests": [
+    {
+      "label": "Software Engineering",
+      "type": "secondary"
+    },
+    {
+      "label": "Cybersecurity",
+      "type": "secondary"
+    },
+    {
+      "label": "Networking",
+      "type": "secondary"
+    }
+  ],
+  "tenets": [
+  { "title": "Leverage Small Wins", "description": "Small, well-placed changes shift entire systems." },
+  { "title": "Balance Stability and Growth", "description": "Systems thrive when grounded yet adaptable." },
+  { "title": "Respect Feedback Loops", "description": "Listen carefully to outcomes; adjust when needed." },
+  { "title": "Build for Evolution", "description": "Good systems don't resist change — they grow with it." },
+  { "title": "Seek Simplicity Beyond Complexity", "description": "Find the core. Eliminate the noise." },
+  { "title": "Design for Resilience", "description": "Expect surprises. Build to withstand and adapt." },
+  { "title": "Solve for the Long Game", "description": "Optimize for sustainability, not just immediate wins." }
+  ],
+
+  "quotes": [
+    "Simplicity is the ultimate sophistication. – Leonardo da Vinci",
+    "In the middle of difficulty lies opportunity. – Albert Einstein",
+    "The best way to predict the future is to invent it. – Alan Kay",
+    "Not all those who wander are lost. – J.R.R. Tolkien",
+    "What you do makes a difference. You have to decide what kind of difference you want to make. – Jane Goodall",
+    "Success is stumbling from failure to failure with no loss of enthusiasm. – Winston Churchill",
+    "Creativity is intelligence having fun. – Albert Einstein",
+    "The obstacle is the way. – Marcus Aurelius",
+    "If you want to go fast, go alone. If you want to go far, go together. – African Proverb",
+    "Fall seven times, stand up eight. – Japanese Proverb",
+    "You miss 100% of the shots you don’t take. – Wayne Gretzky",
+    "Courage is not the absence of fear, but the triumph over it. – Nelson Mandela",
+    "Do not be embarrassed by your failures, learn from them and start again. – Richard Branson",
+    "Art is the lie that enables us to realize the truth. – Pablo Picasso",
+    "It always seems impossible until it’s done. – Nelson Mandela",
+    "Life is either a daring adventure or nothing at all. – Helen Keller",
+    "Well done is better than well said. – Benjamin Franklin",
+    "A ship in harbor is safe, but that is not what ships are built for. – John A. Shedd",
+    "The only way out is through. – Robert Frost",
+    "If you are working on something exciting, it will keep you motivated. – Steve Jobs",
+    "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
+    "Strive not to be a success, but rather to be of value. – Albert Einstein",
+    "The secret of getting ahead is getting started. – Mark Twain",
+    "You can’t use up creativity. The more you use, the more you have. – Maya Angelou",
+    "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree. – Martin Luther",
+    "There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self. – Ernest Hemingway",
+    "I am not a product of my circumstances. I am a product of my decisions. – Stephen Covey",
+    "If you hear a voice within you say 'you cannot paint,' then by all means paint and that voice will be silenced. – Vincent Van Gogh",
+    "The journey is the reward. – Chinese Proverb",
+    "The more I practice, the luckier I get. – Gary Player",
+    "Work hard in silence, let your success be your noise. – Frank Ocean",
+    "There’s a crack in everything, that’s how the light gets in. – Leonard Cohen",
+    "The man who moves a mountain begins by carrying away small stones. – Confucius",
+    "We are what we repeatedly do. Excellence, then, is not an act, but a habit. – Aristotle",
+    "Dreams don't work unless you do. – John C. Maxwell",
+    "It's not what you look at that matters, it's what you see. – Henry David Thoreau",
+    "The mind is everything. What you think you become. – Buddha",
+    "Doubt kills more dreams than failure ever will. – Suzy Kassem",
+    "Adapt what is useful, reject what is useless, and add what is specifically your own. – Bruce Lee",
+    "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away. – Antoine de Saint-Exupéry",
+    "Everything should be made as simple as possible, but no simpler. – Albert Einstein",
+    "You do not rise to the level of your goals. You fall to the level of your systems. – James Clear",
+    "Great things are done by a series of small things brought together. – Vincent Van Gogh",
+    "Stay hungry, stay foolish. – Steve Jobs",
+    "You become what you give your attention to. – Epictetus",
+    "Talent hits a target no one else can hit. Genius hits a target no one else can see. – Arthur Schopenhauer",
+    "We are all apprentices in a craft where no one ever becomes a master. – Ernest Hemingway",
+    "Hard choices, easy life. Easy choices, hard life. – Jerzy Gregorek",
+    "If you can't explain it simply, you don't understand it well enough. – Albert Einstein",
+    "An expert is a person who has made all the mistakes that can be made in a very narrow field. – Niels Bohr"
+  ]
+  
 }

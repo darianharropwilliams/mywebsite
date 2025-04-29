@@ -1,4 +1,4 @@
-import content from '../data/demos.json';
+import content from '../../data/demos.json';
 
 function Demos() {
   return (

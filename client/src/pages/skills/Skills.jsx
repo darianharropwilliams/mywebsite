@@ -1,7 +1,7 @@
 import React from 'react';
-import content from '../data/skills/index';
+import content from '../../data/skills/index';
 
-import SkillGrid from '../components/skillgrid/SkillGrid';
+import SkillGrid from '../../components/skillgrid/SkillGrid';
 console.log("Loaded skills:", content.skills);
 
 function Skills() {
