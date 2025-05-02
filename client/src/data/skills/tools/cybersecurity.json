@@ -1,0 +1,81 @@
+[
+    {
+      "title": "VirtualBox",
+      "details": "An open-source virtualization software for running multiple operating systems on a single machine.",
+      "source": "Cybersecurity coursework and testing",
+      "link": "https://www.virtualbox.org/"
+    },
+    {
+      "title": "Netcat (nc)",
+      "details": "A utility for reading and writing data across network connections using TCP or UDP.",
+      "source": "Networking exercises and server testing",
+      "link": "https://nc110.sourceforge.io/"
+    },
+    {
+      "title": "Traceroute",
+      "details": "Displays the route packets take to reach a destination across a network, useful for diagnosing path issues.",
+      "source": "Networking coursework and scripting",
+      "link": "https://man7.org/linux/man-pages/man8/traceroute.8.html"
+    },
+    {
+      "title": "dig",
+      "details": "A tool used for querying DNS name servers to retrieve domain name information.",
+      "source": "Networking and cybersecurity exercises",
+      "link": "https://linux.die.net/man/1/dig"
+    },
+    {
+      "title": "nslookup",
+      "details": "A command-line tool used for querying the Domain Name System to obtain domain name or IP address mappings.",
+      "source": "Cybersecurity and network labs",
+      "link": "https://man7.org/linux/man-pages/man1/nslookup.1.html"
+    },
+    {
+      "title": "Wireshark",
+      "details": "A network protocol analyzer that captures and displays data packets for inspection and debugging.",
+      "source": "Cybersecurity labs",
+      "link": "https://www.wireshark.org/"
+    },
+    {
+      "title": "TCPdump",
+      "details": "A command-line packet analyzer that captures and filters network traffic for troubleshooting and analysis.",
+      "source": "Network traffic inspection",
+      "link": "https://www.tcpdump.org/"
+    },
+    {
+      "title": "Nmap",
+      "details": "A network scanning tool used to discover hosts, services, and vulnerabilities on a network.",
+      "source": "Cybersecurity scanning projects",
+      "link": "https://nmap.org/"
+    },
+    {
+      "title": "Metasploit",
+      "details": "A framework for developing and executing exploit code against target machines for security testing.",
+      "source": "Cybersecurity lab environments",
+      "link": "https://www.metasploit.com/"
+    },
+    {
+      "title": "John the Ripper",
+      "details": "A password recovery tool that performs dictionary and brute-force attacks on hashed passwords.",
+      "source": "Cybersecurity coursework and labs",
+      "link": "https://www.openwall.com/john/"
+    },
+    {
+      "title": "Hashcat",
+      "details": "GPU-accelerated password recovery tool capable of cracking hashes using dictionary, brute-force, and hybrid attacks.",
+      "source": "Used in cybersecurity coursework and password cracking exercises",
+      "link": "https://hashcat.net/hashcat/"
+    },
+    {
+      "title": "iproute2 (ip)",
+      "details": "Modern Linux networking suite for configuring routing tables, IP addresses, interfaces, and tunnels.",
+      "source": "Used for inspecting and configuring network interfaces and routing on Linux systems",
+      "link": "https://wiki.linuxfoundation.org/networking/iproute2"
+    },
+    {
+      "title": "netstat",
+      "details": "Legacy tool for displaying network connections, routing tables, and interface statistics.",
+      "source": "Used to inspect socket states and open ports on local systems",
+      "link": "https://man7.org/linux/man-pages/man8/netstat.8.html"
+    }       
+  ]
+  

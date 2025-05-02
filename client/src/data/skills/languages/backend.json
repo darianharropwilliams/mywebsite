@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Java",
+      "details": "Strongly typed, object-oriented language for scalable backend services and enterprise apps.",
+      "source": "Backend development using Spring Boot, RESTful API creation"
+    },
+    {
+      "title": "C#",
+      "details": "Modern, object-oriented programming language developed by Microsoft for scalable backend and desktop applications.",
+      "source": "Full-stack app development using ASP.NET for web backends and frontend connections"
+    },
+    {
+      "title": "SQL",
+      "details": "Language for managing and querying structured data in relational databases.",
+      "source": "Query writing for MySQL and PostgreSQL in backend project databases"
+    }
+  ]
+  

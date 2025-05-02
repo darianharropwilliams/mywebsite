@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Socket.IO",
+      "details": "Handled real-time communication and event-driven networking in web applications.",
+      "source": "Networking projects and experiments"
+    },
+    {
+      "title": "Axios",
+      "details": "Simplified HTTP requests between React frontend and Express backend.",
+      "source": "All website backend API calls"
+    },
+    {
+      "title": "Scapy",
+      "details": "Crafted and analyzed network packets for cybersecurity labs and network exercises.",
+      "source": "Cybersecurity labs and scripting projects"
+    }
+  ]
+  

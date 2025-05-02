@@ -1,0 +1,15 @@
+[
+    {
+      "title": "MongoDB Compass",
+      "details": "A GUI for MongoDB that allows users to visualize, explore, and manage data in their databases.",
+      "source": "Backend database management",
+      "link": "https://www.mongodb.com/products/compass"
+    },
+    {
+      "title": "pgAdmin",
+      "details": "Open-source GUI tool for administering and querying PostgreSQL databases.",
+      "source": "Used to manage and query Postgres databases in academic and backend projects",
+      "link": "https://www.pgadmin.org/"
+    }    
+  ]
+  

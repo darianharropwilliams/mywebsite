@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Git",
+      "details": "A distributed version control system used for tracking changes in source code and facilitating collaborative development.",
+      "source": "All personal and academic projects",
+      "link": "https://git-scm.com/"
+    },
+    {
+      "title": "Docker",
+      "details": "A platform for developing, shipping, and running applications in isolated containers for consistency and scalability.",
+      "source": "Personal backend projects",
+      "link": "https://www.docker.com/"
+    },
+    {
+      "title": "NGINX",
+      "details": "A high-performance web server and reverse proxy used for serving content and load balancing.",
+      "source": "Backend server deployments",
+      "link": "https://www.nginx.com/"
+    },
+    {
+      "title": "SSH (OpenSSH)",
+      "details": "A protocol for securely connecting to remote servers and executing commands over encrypted channels.",
+      "source": "Remote development and server configuration",
+      "link": "https://www.openssh.com/"
+    },
+    {
+        "title": "Postman",
+        "details": "A tool for testing APIs by sending HTTP requests and analyzing responses in a user-friendly interface.",
+        "source": "Portfolio and blog API testing",
+        "link": "https://www.postman.com/"
+    },
+    {
+      "title": "Kubernetes (kubectl)",
+      "details": "CLI tool used to deploy, inspect, and manage containerized applications in Kubernetes clusters.",
+      "source": "Used for container orchestration in backend and deployment workflows",
+      "link": "https://kubernetes.io/docs/reference/kubectl/"
+    }    
+  ]
+  

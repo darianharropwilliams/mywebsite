@@ -3,7 +3,7 @@
   "name": "I'm Darian Harrop-Williams",
   "pride": "🦃 VT Hokie · 🐾 PVCC Panther",
   "pitch": "I build systems that work, defend networks that matter, and keep learning along the way.",
-  "bio": "I've always been an engineer, from building Lego robots to coding systems from scratch. Whether it's a trail, a project, or a challenge, I’m drawn to solving it one step at a time.",
+  "bio": "I've always been an engineer. Whether it's a trail, a project, or a challenge, I’m drawn to solving it one step at a time.",
   "tags": [
     {
       "label": "Computer Science",
@@ -25,15 +25,15 @@
     }
   ],
   "tenets": [
-  { "title": "Leverage Small Wins", "description": "Small, well-placed changes shift entire systems." },
-  { "title": "Balance Stability and Growth", "description": "Systems thrive when grounded yet adaptable." },
-  { "title": "Respect Feedback Loops", "description": "Listen carefully to outcomes; adjust when needed." },
-  { "title": "Build for Evolution", "description": "Good systems don't resist change — they grow with it." },
-  { "title": "Seek Simplicity Beyond Complexity", "description": "Find the core. Eliminate the noise." },
-  { "title": "Design for Resilience", "description": "Expect surprises. Build to withstand and adapt." },
-  { "title": "Solve for the Long Game", "description": "Optimize for sustainability, not just immediate wins." }
+    { "title": "Start Small, Build Strong", "description": "Big outcomes begin with careful, focused steps." },
+    { "title": "Balance Stability and Growth", "description": "Solid structures must adapt without losing their integrity." },
+    { "title": "Listen to Results", "description": "Every outcome — good or bad — is feedback for the next move." },
+    { "title": "Design for Change", "description": "Solutions should be able to grow and shift without breaking." },
+    { "title": "Simplify with Purpose", "description": "True simplicity strengthens; it never strips away what matters." },
+    { "title": "Build for Resilience", "description": "Expect disruptions. Engineer strength without brittleness." },
+    { "title": "Solve Beyond the Immediate", "description": "Think past the first version — design for lasting impact." },
+    { "title": "Respect the Hidden Forces", "description": "Unseen feedback loops, limits, and shifts shape every project." }
   ],
-
   "quotes": [
     "Simplicity is the ultimate sophistication. – Leonardo da Vinci",
     "In the middle of difficulty lies opportunity. – Albert Einstein",

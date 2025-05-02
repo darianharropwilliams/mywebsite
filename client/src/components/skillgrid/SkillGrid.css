@@ -25,3 +25,31 @@
     justify-content: flex-start;
   }
   
+  .subfield-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subfield-tab {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .subfield-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .subfield-tab.active {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+  

@@ -24,7 +24,7 @@ function Topbar() {
           <Grid item>
             <Button
               component={Link}
-              to="/"
+              to="/bio"
               className="topbar-link"
               style={{ color: 'white', textTransform: 'none' }}
             >

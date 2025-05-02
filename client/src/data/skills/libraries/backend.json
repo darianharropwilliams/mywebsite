@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Spring",
+    "details": "Built scalable, modular Java backend services using the core Spring ecosystem for dependency injection and REST architecture.",
+    "source": "Java backend coursework and hackathon projects",
+    "link": "https://spring.io/"
+  },
+  {
+    "title": "Spring Boot",
+    "details": "Developed standalone production-ready Java applications with simplified configuration and embedded server support.",
+    "source": "Java REST APIs and full-stack hackathon projects",
+    "link": "https://spring.io/projects/spring-boot"
+  },
+  {
+    "title": "Node.js",
+    "details": "JavaScript runtime built on Chrome's V8 engine, used for developing scalable backend and full-stack applications.",
+    "source": "Used as the backend runtime environment for full-stack MERN applications and personal website APIs",
+    "link": "https://nodejs.org/"
+  },
+  {
+      "title": "Express.js",
+      "details": "Created REST APIs and handled routing and middleware in Node.js apps.",
+      "source": "All website backend connectivity"
+    },
+    {
+      "title": "Mongoose",
+      "details": "Managed MongoDB models, schemas, and queries in Node.js applications.",
+      "source": "Database connection for website backends"
+    },
+    {
+      "title": "Nodemailer",
+      "details": "Sent emails via SMTP servers for contact forms and notifications.",
+      "source": "Website contact forms"
+    },
+    {
+      "title": "dotenv",
+      "details": "Managed application secrets and environment configurations securely.",
+      "source": "All backend projects"
+    }
+]
+  

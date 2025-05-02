@@ -1,0 +1,13 @@
+[
+    {
+      "title": "RISC-V Assembly",
+      "details": "Assembly language for RISC-V instruction set architecture, used in modern educational CPU designs.",
+      "source": "Academic assembly programming projects, understanding CPU instruction cycles"
+    },
+    {
+      "title": "x86 Assembly",
+      "details": "Assembly language for x86 processor architectures, common in modern PCs and OS kernel development.",
+      "source": "Reverse engineering x86 binaries into C code for systems coursework"
+    }
+  ]
+  

@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Make",
+      "details": "A build automation tool that uses Makefiles to define and control the build process of software projects.",
+      "source": "Systems programming projects",
+      "link": "https://www.gnu.org/software/make/"
+    },
+    {
+      "title": "GCC",
+      "details": "A standard C/C++ compiler used for building and optimizing low-level programs across platforms.",
+      "source": "Emulator, server, and memory allocator development",
+      "link": "https://gcc.gnu.org/"
+    }
+  ]
+  
