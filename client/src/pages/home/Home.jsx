@@ -1,7 +1,7 @@
 import content from '../../data/home.json';
 import './Home.css';
 import { useState, useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Home() {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -40,7 +40,6 @@ function Home() {
         </div>
 
         <p className="home-pride">{content.pride}</p>
-
         <p className="home-pitch">{content.pitch}</p>
         <p className="home-bio">{content.bio}</p>
 
@@ -64,17 +63,21 @@ function Home() {
           </p>
         </section>
 
-
         {quotes.length > 0 && (
-          <TransitionGroup className="quote-wrapper">
-            <CSSTransition
-              key={currentQuoteIndex}
-              timeout={500}
-              classNames="quote"
-            >
-              <blockquote className="home-quote">{quotes[currentQuoteIndex]}</blockquote>
-            </CSSTransition>
-          </TransitionGroup>
+          <div className="quote-wrapper">
+            <AnimatePresence mode="wait">
+              <motion.blockquote
+                key={currentQuoteIndex}
+                className="home-quote"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+              >
+                {quotes[currentQuoteIndex]}
+              </motion.blockquote>
+            </AnimatePresence>
+          </div>
         )}
       </div>
 

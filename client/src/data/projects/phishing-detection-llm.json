@@ -4,7 +4,7 @@
     "tech": ["Python", "PyTorch", "LLaMa", "Gemma", "AI", "Cybersecurity"],
     "image": "/logo512.png",
     "slug": "phishing-detection-llm",
-    "date": "Fall 2023",
+    "date": "Spring 2024",
     "featured": true,
     "description": {
       "situation": "Phishing emails continue to bypass traditional filters, prompting the need for smarter detection tools.",

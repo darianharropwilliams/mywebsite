@@ -4,7 +4,7 @@
   "tech": ["C", "Memory Management", "Low-level Programming", "Data Structures", "Systems Programming"],
   "image": "/logo512.png",
   "slug": "dynamic-memory-allocator",
-  "date": "Spring 2024",
+  "date": "Fall 2023",
   "featured": false,
   "description": {
     "situation": "I wanted to deeply understand how malloc and free operate internally by building a production-style memory allocator from scratch in C.",

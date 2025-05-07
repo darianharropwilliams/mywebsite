@@ -1,0 +1,85 @@
+/* === Layout Container === */
+.chip8-container {
+    display: flex;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    font-family: monospace;
+  }
+  
+  /* === ROM Panel (Left Sidebar) === */
+  .rom-panel {
+    width: 200px;
+    padding: 10px;
+    border-right: 2px solid #555;
+    overflow-y: auto;
+    background-color: #111;
+  }
+  
+  .rom-panel button {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 8px;
+    background: #333;
+    color: white;
+    border: 1px solid #888;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .rom-panel button:hover {
+    background: #555;
+  }
+  
+  /* === Emulator Panel (Main Content) === */
+  .emulator-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  canvas#screen {
+    border: 2px solid white;
+  }
+  
+  /* === Keyboard Mapping Grids === */
+  .keyboard-dual-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .grid-column {
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+    grid-template-rows: repeat(4, 32px);
+    gap: 6px;
+  }
+  
+  .key {
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    border: 1px solid #999;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  
+  .grid-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #ccc;
+    font-size: 1rem;
+  }
+  

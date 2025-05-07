@@ -49,8 +49,6 @@ router.post('/contact', async (req, res) => {
     return res.status(500).json({ message: "Error verifying CAPTCHA." });
   }
 
-  console.log("📬 CONTACT FORM DATA:", req.body);
-
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.RECIPIENT_EMAIL,
@@ -72,8 +70,7 @@ ${message}
     if (error) {
       console.error("Error sending email:", error);
       return res.status(500).json({ message: 'Error sending email' });
-    }
-    console.log('Email sent:', info.response);
+    };
     res.status(200).json({ message: 'Email sent successfully' });
   });
 });

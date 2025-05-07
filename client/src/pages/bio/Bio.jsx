@@ -8,7 +8,7 @@ function Bio() {
     <div className="bio-container">
       <h1 className="bio-title">{bio.title}</h1>
       <p className="bio-description">{bio.description}</p>
-      <Timeline events={bio.events} />
+      {/* <Timeline events={bio.events} /> */}
     </div>
   );
 }

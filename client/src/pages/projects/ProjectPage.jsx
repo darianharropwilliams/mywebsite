@@ -1,18 +1,19 @@
 // ProjectPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getPreloadedProject } from '../../utils/projectCache'; // 👈 import the cache reader
+import { getPreloadedProject } from '../../utils/projectCache';
 import StarSlider from "../../components/star/StarSlider";
-import TechCard from "../../components/techcard/TechCard"; // at the top!
+import TechCard from "../../components/techcard/TechCard";
+import './ProjectPage.css';
 
 function ProjectPage() {
   const { slug } = useParams();
-  const [project, setProject] = useState(() => getPreloadedProject(slug)); // Check cache immediately
-  const [loading, setLoading] = useState(!project); // Only load if not cached
+  const [project, setProject] = useState(() => getPreloadedProject(slug));
+  const [loading, setLoading] = useState(!project);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (project) return; // Already cached
+    if (project) return;
 
     async function fetchProject() {
       try {
@@ -31,47 +32,30 @@ function ProjectPage() {
     fetchProject();
   }, [slug, project]);
 
-  if (loading) {
-    return <div style={{ padding: '2rem' }}>Loading...</div>;
-  }
-
-  if (error) {
-    return <div style={{ padding: '2rem', color: 'red' }}>Error: {error}</div>;
-  }
-
-  if (!project) {
-    return <h2 style={{ padding: '2rem' }}>Project not found</h2>;
-  }
+  if (loading) return <div className="project-loading">Loading...</div>;
+  if (error) return <div className="project-error">Error: {error}</div>;
+  if (!project) return <h2 className="project-not-found">Project not found</h2>;
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '900px', margin: '0 auto' }}>
+    <div className="project-page">
       <h1>{project.title}</h1>
-      {project.date && <p style={{ fontStyle: 'italic', color: '#666' }}>{project.date}</p>}
-
-      {/* {project.image && (
-        <img
-          src={project.image}
-          alt={project.title}
-          style={{ width: '100%', maxWidth: '700px', borderRadius: '10px', margin: '1.5rem 0' }}
-        />
-      )} */}
+      {project.date && <p className="project-date">{project.date}</p>}
 
       {project.description && typeof project.description === 'object' ? (
         <StarSlider description={project.description} />
       ) : (
-        <p style={{ fontSize: '1.1rem' }}>{project.longDescription || project.summary}</p>
+        <p className="project-description">{project.longDescription || project.summary}</p>
       )}
 
-      {project.tech && project.tech.length > 0 && (
+      {project.tech?.length > 0 && (
         <>
           <h3>Technologies Used</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1rem' }}>
+          <div className="tech-container">
             {project.tech.map((t, index) => (
               <TechCard
                 key={index}
                 name={typeof t === 'string' ? t : t.name}
                 logo={typeof t === 'object' ? t.logo : undefined}
-                url={typeof t === 'object' ? t.url : `https://www.google.com/search?q=${encodeURIComponent(t)}`}
               />
             ))}
           </div>
@@ -79,36 +63,36 @@ function ProjectPage() {
       )}
 
       {project.skills?.length > 0 && (
-        <>
+        <div className="list-section">
           <h3>Key Skills Developed</h3>
-          <ul>
+          <div className="list-items">
             {project.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+              <div key={index} className="list-item">{skill}</div>
             ))}
-          </ul>
-        </>
+          </div>
+        </div>
       )}
 
       {project.challenges?.length > 0 && (
-        <>
+        <div className="list-section">
           <h3>Key Challenges</h3>
-          <ul>
+          <div className="list-items">
             {project.challenges.map((challenge, index) => (
-              <li key={index}>{challenge}</li>
+              <div key={index} className="list-item">{challenge}</div>
             ))}
-          </ul>
-        </>
+          </div>
+        </div>
       )}
 
       {project.contributions?.length > 0 && (
-        <>
+        <div className="list-section">
           <h3>My Contributions</h3>
-          <ul>
+          <div className="list-items">
             {project.contributions.map((contribution, index) => (
-              <li key={index}>{contribution}</li>
+              <div key={index} className="list-item">{contribution}</div>
             ))}
-          </ul>
-        </>
+          </div>
+        </div>
       )}
 
       {project.achievements && (
@@ -121,7 +105,7 @@ function ProjectPage() {
       {project.resume_bullet && (
         <>
           <h3>Resume Bullet</h3>
-          <p style={{ fontStyle: 'italic', color: '#444' }}>{project.resume_bullet}</p>
+          <p className="project-resume">{project.resume_bullet}</p>
         </>
       )}
 
@@ -133,9 +117,9 @@ function ProjectPage() {
       )}
 
       {project.links?.length > 0 && (
-        <div style={{ marginTop: '2rem' }}>
+        <div className="project-links">
           <h3>Links</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+          <div className="link-list">
             {project.links.map((link, index) => (
               <a
                 key={index}

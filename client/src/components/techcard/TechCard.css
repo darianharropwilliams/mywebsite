@@ -1,22 +1,23 @@
 .tech-card {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    border-radius: 8px;
-    padding: 0.4rem 0.7rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
-  }
-  
-  .tech-card:hover {
-    background-color: #dce4f1;
-  }
-  
-  .tech-card-name {
-    white-space: nowrap;
-  }
-  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #dce4f1; /* use the previous hover color as the default */
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: default;        /* visually reinforces that it's not clickable */
+  transition: none;       /* disables animation */
+  pointer-events: none;   /* makes extra clear that it's inert */
+}
+
+.tech-card:hover {
+  background-color: #dce4f1; /* same as base, prevents color change */
+}
+
+.tech-card-name {
+  white-space: nowrap;
+}

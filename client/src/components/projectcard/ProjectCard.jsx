@@ -7,7 +7,7 @@ import './ProjectCard.css';
 function ProjectCard({ title, summary, tech, image, slug }) {
   return (
     <div className="project-card">
-      {image && <img src={image} alt={title} className="project-image" />}
+      {/* {image && <img src={image} alt={title} className="project-image" />} */}
       <div className="project-content">
         <h3>
           <Link to={`/projects/${slug}`} className="project-title-link">

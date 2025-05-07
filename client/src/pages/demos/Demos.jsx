@@ -1,4 +1,6 @@
-import content from '../../data/demos.json';
+// src/pages/Demos.jsx
+import { Link } from 'react-router-dom';
+import content from '../../data/demos/demos.json';
 
 function Demos() {
   return (
@@ -6,21 +8,20 @@ function Demos() {
       <h1>{content.title}</h1>
       <p>{content.description}</p>
 
-      {/* Construction Zone Visual */}
-      <div style={{
-        marginTop: '2rem',
-        padding: '1rem',
-        border: '4px dashed #f0c000',
-        backgroundColor: '#fff8dc',
-        borderRadius: '12px',
-        display: 'inline-block'
-      }}>
-        <span style={{ fontSize: '2rem' }}>🚧👷‍♂️ Under Construction 👷‍♀️🚧</span>
-        <p style={{ marginTop: '1rem' }}>Please check back later for interactive demos!</p>
-        <div style={{ fontSize: '3rem' }}>
-          🟧🟧🟧🟧🟧<br />
-          🚧🚧🚧🚧🚧
-        </div>
+      <div style={{ marginTop: '3rem' }}>
+        <Link to="/demos/chip8">
+          <button style={{
+            padding: '1rem 2rem',
+            fontSize: '1.2rem',
+            backgroundColor: '#444',
+            color: 'white',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer'
+          }}>
+            Launch CHIP-8 Emulator
+          </button>
+        </Link>
       </div>
     </div>
   );

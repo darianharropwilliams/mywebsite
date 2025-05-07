@@ -9,6 +9,7 @@ import Blog from './pages/blog/Blog.jsx';
 import Demos from './pages/demos/Demos.jsx';
 import Topbar from './components/topbar/Topbar.jsx';  // Topbar component for navigation
 import Bottombar from './components/bottombar/Bottombar.jsx';
+import Chip8Demo from './pages/demos/Chip8Demo';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects/:slug" element={<ProjectPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/demos" element={<Demos />} />
+          <Route path="/demos/chip8" element={<Chip8Demo />} />
         </Routes>
         <Bottombar />
       </div>

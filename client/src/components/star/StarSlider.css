@@ -28,13 +28,42 @@
   width: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  max-height: 100%;
 }
-
 
 .text-wrapper {
   margin: 0 auto;
   max-width: 60%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
+.text-scroll-area {
+  height: 100%;
+  overflow-y: scroll; /* Always reserve scrollbar space */
+  padding-right: 8px;
+  scrollbar-width: none; /* Firefox hides scrollbar */
+}
+
+
+.text-wrapper:hover .text-scroll-area {
+  overflow-y: auto;
+}
+
+
+/* Hide scrollbar by default */
+.text-scroll-area::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/* Show scrollbar only on hover */
+.text-wrapper:hover .text-scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
 
 .arrow-controls {
   position: absolute;

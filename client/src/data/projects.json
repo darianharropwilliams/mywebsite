@@ -4,7 +4,7 @@
   "content": [
     {
       "slug": "personal-website",
-      "title": "Full-Stack Personal Website",
+      "title": "Full-Stack Personal Web Portfolio",
       "summary": "A responsive MERN stack portfolio site that showcases my projects, technical blog posts, and interactive demos.",
       "tech": ["React", "Node.js", "MongoDB", "Express", "CSS Modules", "JWT Auth"],
       "image": "/logo512.png",
@@ -13,38 +13,38 @@
     },
     {
       "slug": "phishing-detection-llm",
-      "title": "Phishing Email Detection with LLMs",
+      "title": "Phishing Detection with Large Language Models",
       "summary": "Built and evaluated a large language model (LLM)-based system to identify phishing emails using pre-labeled datasets from Virginia Tech and other sources.",
       "tech": ["Python", "PyTorch", "LLaMa", "Gemma", "AI", "Cybersecurity"],
-      "image": "/logo512.png",
-      "date": "Fall 2023",
-      "featured": true
-    },
-    {
-      "slug": "vt-hps-website",
-      "title": "VT Human-Powered Submarine Website",
-      "summary": "Redesigned the VT HPS team's static site into a modern full-stack web app with better interactivity and CMS-like editing.",
-      "tech": ["React", "Node.js", "MongoDB", "JavaScript", "CSS"],
       "image": "/logo512.png",
       "date": "Spring 2024",
       "featured": true
     },
     {
+      "slug": "vt-hps-website",
+      "title": "Full-Stack Website for Virginia Tech Human-Powered Submarine Tean",
+      "summary": "Redesigned the VT HPS team's static site into a modern full-stack web app with better interactivity and CMS-like editing.",
+      "tech": ["React", "Node.js", "MongoDB", "JavaScript", "CSS"],
+      "image": "/logo512.png",
+      "date": "Fall 2023",
+      "featured": true
+    },
+    {
       "slug": "chess-image-classifier",
-      "title": "Chess Piece Image Classifier",
+      "title": "Machine Learning Image Classifier for Chess Pieces",
       "summary": "Built a deep learning classifier to recognize individual chess pieces from real-world images, achieving 91% accuracy through advanced augmentation and convolutional neural networks.",
       "tech": ["Python", "PyTorch", "CNN", "Computer Vision", "Data Augmentation"],
       "image": "/logo512.png",
-      "date": "Spring 2023",
+      "date": "Spring 2024",
       "featured": false
     },
     {
       "slug": "ai-interview-helper",
-      "title": "AI Interview Help Website",
+      "title": "Full Stack Interview Help Website with AI",
       "summary": "Full-stack hackathon project that used GPT-3.5 to simulate mock interviews and provide personalized feedback.",
       "tech": ["React", "Java Spring", "MongoDB", "GPT-3.5", "Hackathon"],
       "image": "/logo512.png",
-      "date": "Fall 2023 (Hackathon)",
+      "date": "Spring 2024",
       "featured": true
     },
     {
@@ -58,16 +58,16 @@
     },
     {
       "slug": "dynamic-memory-allocator",
-      "title": "Dynamic Memory Allocator",
+      "title": "Dynamic Memory Allocator (malloc)",
       "summary": "Designed and optimized a custom C memory allocator with 16-bin segmented free lists, compact metadata, and real heap expansion via sbrk(), balancing speed and memory reuse under stress-testing conditions.",
       "tech": ["C", "Memory Management", "Low-level Programming", "Data Structures", "Systems Programming"],
       "image": "/logo512.png",
-      "date": "Spring 2024",
+      "date": "Fall 2023",
       "featured": false
     },
     {
       "slug": "threadpool-c",
-      "title": "Threadpool Library",
+      "title": "Threadpool Task Dispatcher",
       "summary": "Developed a lightweight threadpool in C that queues tasks and runs them in parallel across multiple threads.",
       "tech": ["C", "Concurrency", "Threading"],
       "image": "/logo512.png",
@@ -80,8 +80,17 @@
       "summary": "Wrote a terminal shell in C that parses and executes commands with minimal latency and error handling.",
       "tech": ["C", "Linux", "Systems Programming"],
       "image": "/logo512.png",
-      "date": "Spring 2024",
+      "date": "Fall 2023",
       "featured": false
+    },
+    {
+      "slug": "chip8-emulator",
+      "title": "Chip8 Binary Emulator",
+      "summary": "Built a virtual Chip8 architecture with WASM embedding. Runs any .ch8 binary with either local SDL or in-browser WASM for display and audio.",
+      "tech": ["C", "WASM"],
+      "image": "/logo512.png",
+      "date": "Spring 2025",
+      "featured": true
     }
   ]
 }

@@ -4,7 +4,7 @@
     "tech": ["C", "Linux", "Systems Programming"],
     "image": "/logo512.png",
     "slug": "custom-terminal-shell",
-    "date": "Spring 2024",
+    "date": "Fall 2023",
     "featured": false,
     "description": {
       "situation": "Unix-like shells are essential, but building one from scratch provides deep insight into system programming.",

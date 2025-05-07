@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Timeline.css';
 
 function Timeline({ events }) {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <div className="timeline">
+    <div className="timeline-container">
+      <div className="timeline-line" />
       {events.map((entry, index) => (
-        <div className="timeline-item" key={index}>
-          <div className="timeline-dot" />
-          <div className="timeline-content">
+        <div className="timeline-entry" key={index}>
+          <button className="timeline-title" onClick={() => toggle(index)}>
+            {entry.title}
+          </button>
+          <div className={`timeline-details ${activeIndex === index ? 'active' : ''}`}>
             <span className="timeline-date">{entry.displayDate}</span>
-            <h3 className="timeline-entry-title">{entry.title}</h3>
             <p className="timeline-description">{entry.description}</p>
           </div>
         </div>

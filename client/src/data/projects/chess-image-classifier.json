@@ -4,7 +4,7 @@
   "tech": ["Python", "PyTorch", "CNN", "Computer Vision", "Data Augmentation"],
   "image": "/logo512.png",
   "slug": "chess-image-classifier",
-  "date": "Spring 2023",
+  "date": "Spring 2024",
   "featured": false,
   "description": {
     "situation": "Board state recognition in chess starts with accurately identifying individual pieces from diverse visual sources, including photographs, sketches, and rendered images.",

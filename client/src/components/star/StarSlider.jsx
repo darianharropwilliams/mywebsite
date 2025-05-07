@@ -82,8 +82,10 @@ function StarSlider({ description }) {
           {sections.map((key, i) => (
             <div key={i} className="star-card">
               <div className="text-wrapper">
-                <h4>{labels[key]}</h4>
-                <p>{description[key]}</p>
+                <div className="text-scroll-area">
+                  <h4>{labels[key]}</h4>
+                  <p>{description[key]}</p>
+                </div>
               </div>
             </div>
           ))}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './PostBlogCard.css';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import MarkdownInput from '../markdowninput/MarkdownInput.jsx';
 
 
@@ -80,6 +81,7 @@ function PostBlogCard({ post, onDelete, onUpdate }) {
 
           <div className="content-preview">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               a: ({ node, ...props }) => (
                 <a
@@ -89,17 +91,20 @@ function PostBlogCard({ post, onDelete, onUpdate }) {
                   rel="noopener noreferrer"
                 />
               ),
-              code: ({ node, inline, className, children, ...props }) =>
-                inline ? (
+              code: ({ node, inline, className, children, ...props }) => {
+                const codeString = typeof children === 'string' ? children : children.join('');
+              
+                return inline ? (
                   <code
                     style={{
                       backgroundColor: '#f4f4f4',
                       padding: '0.2em 0.4em',
                       borderRadius: '4px',
+                      fontFamily: 'monospace',
                     }}
                     {...props}
                   >
-                    {children}
+                    {codeString}
                   </code>
                 ) : (
                   <pre
@@ -111,13 +116,15 @@ function PostBlogCard({ post, onDelete, onUpdate }) {
                     }}
                     {...props}
                   >
-                    <code className={className}>{children}</code>
+                    <code className={className}>{codeString}</code>
                   </pre>
-                ),
+                );
+              }
             }}
           >
             {post.content}
           </ReactMarkdown>
+
 
 
 

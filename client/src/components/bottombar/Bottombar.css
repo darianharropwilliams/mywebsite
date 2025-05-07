@@ -3,43 +3,34 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--mui-background-paper, #fff); /* Material UI fallback */
-  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
   z-index: 1200;
 }
 
 .bottombar-toggle {
+  width: 100%;
   text-align: center;
   background-color: #1976d2;
-  color: #fff;
-  padding: 8px 0;
-}
-
-.bottombar-button {
   color: white;
-  text-transform: none;
-  display: inline-flex; /* ✅ make it shrink to fit contents */
-  align-items: center;
-  justify-content: center; /* ✅ center icon + text inside */
-  gap: 8px;
-  font-weight: bold;
-  background: none;
-  border: none;
-  box-shadow: none;
-  min-width: 0;
-  padding: 8px 16px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.bottombar-toggle:hover {
+  background-color: #1565c0;
+}
 
-/* Optional hover effect for the button */
-.bottombar-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.bottombar-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .bottombar-paper {
   max-width: 900px;
   margin: 0 auto;
   padding: 16px;
+  background-color: #fff;
 }

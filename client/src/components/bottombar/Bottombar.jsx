@@ -3,40 +3,33 @@ import {
   Box,
   Collapse,
   Paper,
-  Typography,
-  Button,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import Contactform from '../contactform/ContactForm';
-import './Bottombar.css'; // 👈 import the CSS file
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ContactForm from '../contactform/ContactForm';
+import './Bottombar.css';
 
 function Bottombar() {
   const [open, setOpen] = useState(false);
 
   return (
     <Box className="bottombar">
-      {/* Toggle Button */}
-      <Box className="bottombar-toggle">
-      <Button
-        variant="text"
-        disableRipple
+      <Box
+        className={`bottombar-toggle ${open ? 'open' : ''}`}
         onClick={() => setOpen(!open)}
-        className="bottombar-button"
       >
-        {open ? <ExpandMoreIcon /> : <ExpandLessIcon />}
-        Contact
-      </Button>
-
+        {!open ? (
+          <span className="bottombar-label">
+            Contact Me <ExpandLessIcon fontSize="small" />
+          </span>
+        ) : (
+          <ExpandMoreIcon fontSize="small" />
+        )}
       </Box>
 
-      {/* Collapsible Content */}
       <Collapse in={open}>
         <Paper elevation={3} className="bottombar-paper">
-          <Typography variant="h6" gutterBottom align="center">
-            Contact Me!
-          </Typography>
-          <Contactform />
+          <ContactForm />
         </Paper>
       </Collapse>
     </Box>

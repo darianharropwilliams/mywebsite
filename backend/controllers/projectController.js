@@ -14,20 +14,23 @@ exports.getProjects = async (req, res) => {
 
 // GET full project by slug
 exports.getProjectBySlug = async (req, res) => {
-  // console.log('Fetching project for slug:', req.params.slug);
+  const rawSlug = req.params.slug;
 
   try {
-    const project = await Project.findOne({ slug: req.params.slug });
+    const allProjects = await Project.find({}, 'slug');
+    const slugs = allProjects.map(p => `"${p.slug}"`);
+
+    const project = await Project.findOne({
+      slug: new RegExp(`^${rawSlug}$`, 'i') // Case-insensitive match
+    });
 
     if (!project) {
-      // console.log('Project not found for slug:', req.params.slug);
       return res.status(404).json({ message: 'Project not found' });
     }
 
-    // console.log('Project found:', project.slug);
     res.json(project);
   } catch (err) {
-    // console.error('Error fetching project:', err);
+    console.error('🚨 Error fetching project:', err);
     res.status(500).json({ message: 'Failed to fetch project', error: err.message });
   }
 };
