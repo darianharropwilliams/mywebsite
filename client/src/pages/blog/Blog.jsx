@@ -41,14 +41,14 @@ function Blog() {
       <h1>{blogContent.title}</h1>
       <p className="subtitle">{blogContent.subtitle}</p>
 
-      <PostBlogForm onSubmit={handleSubmit} />
+      {/* <PostBlogForm onSubmit={handleSubmit} /> */}
       <div className="post-list">
         {posts.map(post => (
           <PostBlogCard
             key={post._id}
             post={post}
-            onDelete={handleDelete}
-            onUpdate={handleUpdate}
+            // onDelete={handleDelete}
+            // onUpdate={handleUpdate}
           />
         ))}
       </div>

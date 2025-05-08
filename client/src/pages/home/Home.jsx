@@ -81,9 +81,12 @@ function Home() {
         )}
       </div>
 
-      <div className="home-image">
-        <img src="/Cover_image.jpeg" alt="Cover of Darian" />
-      </div>
+      {window.innerWidth > 768 && (
+        <div className="home-image">
+          <img src="/Cover_image.jpeg" alt="Cover of Darian" />
+        </div>
+      )}
+
     </div>
   );
 }

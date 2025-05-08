@@ -1,4 +1,3 @@
-// src/pages/Demos.jsx
 import { Link } from 'react-router-dom';
 import content from '../../data/demos/demos.json';
 
@@ -7,6 +6,10 @@ function Demos() {
     <div style={{ padding: '2rem', textAlign: 'center' }}>
       <h1>{content.title}</h1>
       <p>{content.description}</p>
+
+      <div className="mobile-warning">
+        ⚠️ Note: Demos are not currently mobile-friendly.
+      </div>
 
       <div style={{ marginTop: '3rem' }}>
         <Link to="/demos/chip8">

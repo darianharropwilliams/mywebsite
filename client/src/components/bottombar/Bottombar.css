@@ -29,9 +29,24 @@
 }
 
 .bottombar-paper {
-  width: 100%;             /* Full width */
-  margin: 0;               /* No centering margin */
+  width: 100%;
+  margin: 0;
   padding: 16px;
   background-color: #fff;
-  box-sizing: border-box;  /* Prevent horizontal overflow */
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .bottombar-toggle {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+
+  .bottombar-label {
+    gap: 4px;
+  }
+
+  .bottombar-paper {
+    padding: 12px;
+  }
 }

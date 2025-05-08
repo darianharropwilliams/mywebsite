@@ -57,7 +57,7 @@ function PostBlogCard({ post, onDelete, onUpdate }) {
         <>
           <div className="post-header">
             <h2>{post.title}</h2>
-            <div className="post-actions">
+            {/* <div className="post-actions">
               <button
                 className="delete-btn"
                 onClick={() => onDelete(post._id)}
@@ -74,7 +74,7 @@ function PostBlogCard({ post, onDelete, onUpdate }) {
               >
                 ✏️
               </button>
-            </div>
+            </div> */}
           </div>
 
           <p className="author">by {post.author}</p>

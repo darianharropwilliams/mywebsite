@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {
-  TextField,
-  Button,
-  Box,
-  Stack,
-  Alert,
-} from '@mui/material';
+import { TextField, Button, Box, Alert } from '@mui/material';
 import ReCAPTCHA from "react-google-recaptcha";
 import './ContactForm.css';
 
@@ -25,7 +19,7 @@ function ContactForm() {
         email,
         subject,
         message,
-        website: '', // honeypot
+        website: '',
         captchaToken,
       });
       setStatus({ type: 'success', message: 'Message sent successfully!' });
@@ -35,10 +29,6 @@ function ContactForm() {
     } catch (error) {
       setStatus({ type: 'error', message: 'Error sending message, please try again.' });
     }
-  };
-
-  const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
   };
 
   return (
@@ -74,15 +64,10 @@ function ContactForm() {
         <div className="contact-side">
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            onChange={handleCaptchaChange}
+            onChange={(token) => setCaptchaToken(token)}
             className="contact-captcha"
           />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            className="contact-send"
-          >
+          <Button type="submit" variant="contained" color="primary" className="contact-send">
             Send
           </Button>
         </div>

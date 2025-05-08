@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import {
-  Box,
-  Collapse,
-  Paper,
-} from '@mui/material';
+import { Box, Collapse, Paper } from '@mui/material';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ContactForm from '../contactform/ContactForm';

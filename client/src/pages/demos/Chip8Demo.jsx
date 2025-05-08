@@ -35,38 +35,44 @@ function Chip8Demo() {
   }, []);
 
   return (
-    <div className="chip8-container">
-      <aside className="rom-panel" id="rom-links">
-        {/* Buttons injected here */}
-      </aside>
+    <div className="chip8-page">
+      <div className="mobile-blocker">
+        <p>This demo is not available on mobile devices. Please visit on a larger screen.</p>
+      </div>
 
-      <main className="emulator-panel">
-        <h1>{content.title}</h1>
-        <p>{content.description}</p>
+      <div className="chip8-container">
+        <aside className="rom-panel" id="rom-links">
+          {/* Buttons injected here */}
+        </aside>
 
-        <input type="file" id="rom-picker" />
-        <canvas id="screen" width="640" height="320" />
+        <main className="emulator-panel">
+          <h1>{content.title}</h1>
+          <p>{content.description}</p>
 
-        <h2>{content.keyboardMappingHeading}</h2>
-        <div className="keyboard-dual-grid">
-          <div>
-            <div className="grid-label">CHIP-8</div>
-            <div className="grid-column">
-              {content.keyboardLeft.flat().map((key, i) => (
-                <div className="key" key={`left-${i}`}>{key}</div>
-              ))}
+          <input type="file" id="rom-picker" />
+          <canvas id="screen" width="640" height="320" />
+
+          <h2>{content.keyboardMappingHeading}</h2>
+          <div className="keyboard-dual-grid">
+            <div>
+              <div className="grid-label">CHIP-8</div>
+              <div className="grid-column">
+                {content.keyboardLeft.flat().map((key, i) => (
+                  <div className="key" key={`left-${i}`}>{key}</div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="grid-label">QWERTY</div>
+              <div className="grid-column">
+                {content.keyboardRight.flat().map((key, i) => (
+                  <div className="key" key={`right-${i}`}>{key}</div>
+                ))}
+              </div>
             </div>
           </div>
-          <div>
-            <div className="grid-label">QWERTY</div>
-            <div className="grid-column">
-              {content.keyboardRight.flat().map((key, i) => (
-                <div className="key" key={`right-${i}`}>{key}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
