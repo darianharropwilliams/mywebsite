@@ -1,78 +1,45 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Grid, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { AppBar, Box, Button, Typography } from '@mui/material';
+import { Link, useLocation } from 'react-router-dom';
 import './Topbar.css';
 
 function Topbar() {
+  const location = useLocation();
+
+  const navItems = [
+    { label: 'Darian Harrop-Williams', to: '/', isName: true },
+    { label: 'Bio', to: '/bio' },
+    { label: 'Skills', to: '/skills' },
+    { label: 'Projects', to: '/projects' },
+    { label: 'Blog', to: '/blog' },
+    { label: 'Demos', to: '/demos' },
+  ];
+
   return (
     <AppBar position="fixed" color="primary">
-      <Toolbar>
-        <Grid container alignItems="center" spacing={2}>
-          {/* Name link (home) */}
-          <Grid item>
-            <Typography
-              variant="h6"
+      <Box className="topbar-container">
+        {navItems.map(({ label, to, isName }) =>
+          isName ? (
+            <Box
+              key={to}
               component={Link}
-              to="/"
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              to={to}
+              className={`topbar-box topbar-name ${location.pathname === to ? 'active' : ''}`}
             >
-              Darian Harrop-Williams
-            </Typography>
-          </Grid>
-
-          {/* Topbar text links */}
-          <Grid item>
-            <Button
+              <Typography variant="h6">{label}</Typography>
+            </Box>
+          ) : (
+            <Box
+              key={to}
               component={Link}
-              to="/bio"
-              className="topbar-link"
-              style={{ color: 'white', textTransform: 'none' }}
+              to={to}
+              className={`topbar-box topbar-link ${location.pathname === to ? 'active' : ''}`}
             >
-              Bio
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              component={Link}
-              to="/skills"
-              className="topbar-link"
-              style={{ color: 'white', textTransform: 'none' }}
-            >
-              Skills
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              component={Link}
-              to="/projects"
-              className="topbar-link"
-              style={{ color: 'white', textTransform: 'none' }}
-            >
-              Projects
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              component={Link}
-              to="/blog"
-              className="topbar-link"
-              style={{ color: 'white', textTransform: 'none' }}
-            >
-              Blog
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              component={Link}
-              to="/demos"
-              className="topbar-link"
-              style={{ color: 'white', textTransform: 'none' }}
-            >
-              Demos
-            </Button>
-          </Grid>
-        </Grid>
-      </Toolbar>
+              {label}
+            </Box>
+          )
+        )}
+      </Box>
     </AppBar>
   );
 }

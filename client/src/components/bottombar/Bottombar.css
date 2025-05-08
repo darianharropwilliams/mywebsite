@@ -29,8 +29,9 @@
 }
 
 .bottombar-paper {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;             /* Full width */
+  margin: 0;               /* No centering margin */
   padding: 16px;
   background-color: #fff;
+  box-sizing: border-box;  /* Prevent horizontal overflow */
 }

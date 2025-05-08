@@ -17,4 +17,52 @@
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
+  .bio-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .bio-section {
+    flex: 1 1 300px;
+    min-width: 250px;
+  }
+  
+  .bio-facts {
+    list-style: none;
+    padding: 0;
+  }
+  .bio-facts li {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .focus-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .focus-columns div {
+    flex: 1 1 200px;
+  }
+  
+  .focus-columns div h4 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .focus-columns li {
+    margin-bottom: 0.4rem;
+  }
+  
+  
+  .bio-about {
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+    color: #444;
+  }
   

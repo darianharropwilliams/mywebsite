@@ -39,7 +39,7 @@ function Home() {
           </div>
         </div>
 
-        <p className="home-pride">{content.pride}</p>
+        {/* <p className="home-pride">{content.pride}</p> */}
         <p className="home-pitch">{content.pitch}</p>
         <p className="home-bio">{content.bio}</p>
 

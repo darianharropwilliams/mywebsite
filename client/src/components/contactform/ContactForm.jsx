@@ -8,6 +8,7 @@ import {
   Alert,
 } from '@mui/material';
 import ReCAPTCHA from "react-google-recaptcha";
+import './ContactForm.css';
 
 function ContactForm() {
   const [email, setEmail] = useState('');
@@ -41,49 +42,51 @@ function ContactForm() {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit}>
+    <Box component="form" onSubmit={handleSubmit} className="contact-form-container">
       <input type="text" name="website" style={{ display: 'none' }} value="" onChange={() => {}} />
-      <Stack spacing={1}>
-        {status && <Alert severity={status.type}>{status.message}</Alert>}
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} alignItems="flex-start">
-          <TextField
-            type="email"
-            label="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            sx={{ minWidth: 180 }}
-          />
-          <TextField
-            label="Subject"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            required
-            sx={{ minWidth: 180 }}
-          />
-          <TextField
-            label="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            multiline
-            rows={2}
-            sx={{ flexGrow: 1 }}
+      {status && <Alert severity={status.type}>{status.message}</Alert>}
+
+      <div className="contact-form-row">
+        <TextField
+          type="email"
+          label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="contact-input"
+        />
+        <TextField
+          label="Subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          required
+          className="contact-input"
+        />
+        <TextField
+          label="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+          multiline
+          rows={2}
+          className="contact-message"
+        />
+        <div className="contact-side">
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+            onChange={handleCaptchaChange}
+            className="contact-captcha"
           />
           <Button
             type="submit"
             variant="contained"
             color="primary"
-            sx={{ whiteSpace: 'nowrap', height: '100%' }}
+            className="contact-send"
           >
             Send
           </Button>
-        </Stack>
-        <ReCAPTCHA
-          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-          onChange={handleCaptchaChange}
-        />
-      </Stack>
+        </div>
+      </div>
     </Box>
   );
 }

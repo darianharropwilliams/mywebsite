@@ -1,9 +1,9 @@
 {
   "title": "Welcome!",
   "name": "I'm Darian Harrop-Williams",
-  "pride": "🦃 VT Hokie · 🐾 PVCC Panther",
-  "pitch": "I build systems that work, defend networks that matter, and keep learning along the way.",
-  "bio": "I've always been an engineer. Whether it's a trail, a project, or a challenge, I’m drawn to solving it one step at a time.",
+  "pride": "Virginia Tech",
+  "pitch": "Computer science graduate from Virginia Tech with hands-on experience in systems programming, web development, and cybersecurity. I’m looking to bring curiosity, discipline, and project-driven skills to a team that values building practical, resilient solutions.",
+  "bio": "I’m a curious person by nature, that’s what led me to Computer Science. I enjoy breaking things down, learning how they work, and putting them back together better. Outside of coding, I’m into basketball, hiking, science, and sci-fi, or anything that challenges me to think differently or see the bigger picture.",
   "tags": [
     {
       "label": "Computer Science",
@@ -27,11 +27,11 @@
   "tenets": [
     { "title": "Start Small, Build Strong", "description": "Big outcomes begin with careful, focused steps." },
     { "title": "Balance Stability and Growth", "description": "Solid structures must adapt without losing their integrity." },
-    { "title": "Listen to Results", "description": "Every outcome — good or bad — is feedback for the next move." },
+    { "title": "Listen to Results", "description": "Every outcome, good or bad, is feedback for the next move." },
     { "title": "Design for Change", "description": "Solutions should be able to grow and shift without breaking." },
     { "title": "Simplify with Purpose", "description": "True simplicity strengthens; it never strips away what matters." },
     { "title": "Build for Resilience", "description": "Expect disruptions. Engineer strength without brittleness." },
-    { "title": "Solve Beyond the Immediate", "description": "Think past the first version — design for lasting impact." },
+    { "title": "Solve Beyond the Immediate", "description": "Think past the first version. Design for lasting impact." },
     { "title": "Respect the Hidden Forces", "description": "Unseen feedback loops, limits, and shifts shape every project." }
   ],
   "quotes": [

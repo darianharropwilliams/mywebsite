@@ -34,9 +34,9 @@ app.use('/api/contact', contactLimiter);
 mongoose.connect(process.env.MONGO_URI, {
   // remove deprecated options
 }).then(() => {
-  console.log("✅ MongoDB connected");
+  console.log("MongoDB connected");
 }).catch((err) => {
-  console.error("❌ MongoDB connection error:", err.message);
+  console.error("MongoDB connection error:", err.message);
 });
 
 
