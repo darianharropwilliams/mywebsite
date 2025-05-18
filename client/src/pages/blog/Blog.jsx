@@ -9,7 +9,7 @@ function Blog() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = () => {
-    axios.get('/api/blog')
+    axios.get(`${process.env.REACT_APP_API_URL}/blog`)
       .then(res => setPosts(res.data))
       .catch(err => console.error(err));
   };

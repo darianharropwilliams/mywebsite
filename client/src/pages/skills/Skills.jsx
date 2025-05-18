@@ -6,7 +6,7 @@ function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/skills')
+    fetch(`${process.env.REACT_APP_API_URL}/skills`)
       .then(res => res.json())
       .then(data => {
         setSkills(data);

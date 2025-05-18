@@ -7,7 +7,7 @@ export const fetchSkills = async () => {
   if (cachedSkills) return cachedSkills;
 
   try {
-    const res = await fetch('/api/skills');
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/skills`);
     const data = await res.json();
     cachedSkills = data;
     return data;

@@ -17,7 +17,7 @@ function ProjectPage() {
 
     async function fetchProject() {
       try {
-        const res = await fetch(`/api/projects/${slug}`);
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/${slug}`);
         if (!res.ok) throw new Error('Project not found');
         const data = await res.json();
         setProject(data);
