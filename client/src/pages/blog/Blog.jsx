@@ -8,15 +8,18 @@ import PostBlogCard from '../../components/postblogcard/PostBlogCard.jsx';
 function Blog() {
   const [posts, setPosts] = useState([]);
 
-  const fetchPosts = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}/blog`)
-      .then(res => setPosts(res.data))
-      .catch(err => console.error(err));
-  };
-
   useEffect(() => {
-    fetchPosts();
+    console.log('[Blog] Fetching blog posts...');
+    axios.get(`${process.env.REACT_APP_API_URL}/blog`)
+      .then(res => {
+        console.log('[Blog] Fetched posts:', res.data);
+        setPosts(res.data);
+      })
+      .catch(err => {
+        console.error('[Blog] Error fetching blog posts:', err);
+      });
   }, []);
+
 
   return (
     <div className="blog-container">

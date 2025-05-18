@@ -6,17 +6,20 @@ function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log('[Skills] Fetching skills...');
     fetch(`${process.env.REACT_APP_API_URL}/skills`)
       .then(res => res.json())
       .then(data => {
+        console.log('[Skills] Fetched skills:', data);
         setSkills(data);
         setLoading(false);
       })
       .catch(err => {
-        console.error('Failed to fetch skills:', err);
+        console.error('[Skills] Error fetching skills:', err);
         setLoading(false);
       });
   }, []);
+
 
   return (
     <div style={{ padding: '2rem' }}>

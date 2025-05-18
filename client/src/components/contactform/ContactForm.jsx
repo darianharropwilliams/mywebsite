@@ -13,20 +13,23 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('[ContactForm] Submitting form with data:', { email, subject, message, captchaToken });
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
         email,
         subject,
         message,
         website: '',
         captchaToken,
       });
+      console.log('[ContactForm] Success response from API:', response.data);
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setEmail('');
       setSubject('');
       setMessage('');
     } catch (error) {
+      console.error('[ContactForm] Error sending message:', error);
       setStatus({ type: 'error', message: 'Error sending message, please try again.' });
     }
   };
@@ -41,21 +44,30 @@ function ContactForm() {
           type="email"
           label="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            console.log('[ContactForm] Email changed:', e.target.value);
+            setEmail(e.target.value);
+          }}
           required
           className="contact-input"
         />
         <TextField
           label="Subject"
           value={subject}
-          onChange={(e) => setSubject(e.target.value)}
+          onChange={(e) => {
+            console.log('[ContactForm] Subject changed:', e.target.value);
+            setSubject(e.target.value);
+          }}
           required
           className="contact-input"
         />
         <TextField
           label="Message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => {
+            console.log('[ContactForm] Message changed:', e.target.value);
+            setMessage(e.target.value);
+          }}
           required
           multiline
           rows={2}
@@ -64,7 +76,10 @@ function ContactForm() {
         <div className="contact-side">
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            onChange={(token) => setCaptchaToken(token)}
+            onChange={(token) => {
+              console.log('[ContactForm] Captcha token set:', token);
+              setCaptchaToken(token);
+            }}
             className="contact-captcha"
           />
           <Button type="submit" variant="contained" color="primary" className="contact-send">

@@ -13,16 +13,22 @@ function ProjectPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (project) return;
+    if (project) {
+      console.log('[ProjectPage] Project found in cache:', project);
+      return;
+    }
 
+    console.log('[ProjectPage] Fetching project from API...');
     async function fetchProject() {
       try {
         const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/${slug}`);
+        console.log('[ProjectPage] Fetch status:', res.status);
         if (!res.ok) throw new Error('Project not found');
         const data = await res.json();
+        console.log('[ProjectPage] Project data received:', data);
         setProject(data);
       } catch (err) {
-        console.error('Failed to fetch project', err);
+        console.error('[ProjectPage] Error fetching project:', err);
         setError(err.message || 'Unknown error');
       } finally {
         setLoading(false);
@@ -31,6 +37,7 @@ function ProjectPage() {
 
     fetchProject();
   }, [slug, project]);
+
 
   if (loading) return <div className="project-loading">Loading...</div>;
   if (error) return <div className="project-error">Error: {error}</div>;
