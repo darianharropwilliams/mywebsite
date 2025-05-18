@@ -9,7 +9,6 @@ function PostBlogForm({ onSubmit }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitting form:", form);
     if (!form.title || !form.author || !form.content) return;
     onSubmit({ ...form });
     setForm({ title: '', author: '', content: '' });

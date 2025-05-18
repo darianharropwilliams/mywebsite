@@ -9,10 +9,8 @@ function Blog() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    console.log('[Blog] Fetching blog posts...');
     axios.get(`${process.env.REACT_APP_API_URL}/blog`)
       .then(res => {
-        console.log('[Blog] Fetched posts:', res.data);
         setPosts(res.data);
       })
       .catch(err => {

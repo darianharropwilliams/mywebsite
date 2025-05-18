@@ -13,8 +13,6 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('[ContactForm] Submitting form with data:', { email, subject, message, captchaToken });
-
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
         email,
@@ -23,7 +21,6 @@ function ContactForm() {
         website: '',
         captchaToken,
       });
-      console.log('[ContactForm] Success response from API:', response.data);
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setEmail('');
       setSubject('');
@@ -45,7 +42,6 @@ function ContactForm() {
           label="Email"
           value={email}
           onChange={(e) => {
-            console.log('[ContactForm] Email changed:', e.target.value);
             setEmail(e.target.value);
           }}
           required
@@ -55,7 +51,6 @@ function ContactForm() {
           label="Subject"
           value={subject}
           onChange={(e) => {
-            console.log('[ContactForm] Subject changed:', e.target.value);
             setSubject(e.target.value);
           }}
           required
@@ -65,7 +60,6 @@ function ContactForm() {
           label="Message"
           value={message}
           onChange={(e) => {
-            console.log('[ContactForm] Message changed:', e.target.value);
             setMessage(e.target.value);
           }}
           required
@@ -77,7 +71,6 @@ function ContactForm() {
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={(token) => {
-              console.log('[ContactForm] Captcha token set:', token);
               setCaptchaToken(token);
             }}
             className="contact-captcha"

@@ -6,11 +6,9 @@ function Skills() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('[Skills] Fetching skills...');
     fetch(`${process.env.REACT_APP_API_URL}/skills`)
       .then(res => res.json())
       .then(data => {
-        console.log('[Skills] Fetched skills:', data);
         setSkills(data);
         setLoading(false);
       })
