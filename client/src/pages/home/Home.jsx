@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 function Home() {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [showTenets, setShowTenets] = useState(false);
+
   const quotes = content.quotes || [];
 
   useEffect(() => {
@@ -50,20 +52,30 @@ function Home() {
         </div>
 
         {window.innerWidth > 768 && (
-        <section className="home-tenets">
-          <h3>Engineer Mindset I Live By:</h3>
-          <div className="tenets-pillars">
-            {content.tenets?.map((tenet, index) => (
-              <div key={index} className="pillar-card">
-                <h4>{tenet.title}</h4>
-                <p>{tenet.description}</p>
+          <section className="home-tenets">
+            <h3>Engineer Mindset I Live By:</h3>
+            <button
+              className="tenets-toggle-button"
+              onClick={() => setShowTenets(prev => !prev)}
+            >
+              {showTenets ? "Hide Cards" : "Show Cards"}
+            </button>
+
+            {showTenets && (
+              <div className="tenets-pillars">
+                {content.tenets?.map((tenet, index) => (
+                  <div key={index} className="pillar-card">
+                    <h4>{tenet.title}</h4>
+                    <p>{tenet.description}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <p className="tenets-credit">
-            <em>Inspired by <u>Thinking in Systems</u> by Donella Meadows</em>
-          </p>
-        </section>
+            )}
+
+            <p className="tenets-credit">
+              <em>Inspired by <u>Thinking in Systems</u> by Donella Meadows</em>
+            </p>
+          </section>
         )}
         {quotes.length > 0 && (
           <div className="quote-wrapper">
