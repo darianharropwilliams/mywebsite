@@ -14,7 +14,7 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
         email,
         subject,
         message,
