@@ -1,14 +1,28 @@
-import React from 'react';
-import content from '../../data/skills/index';
-
+import React, { useEffect, useState } from 'react';
 import SkillGrid from '../../components/skillgrid/SkillGrid';
 
 function Skills() {
+  const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/skills')
+      .then(res => res.json())
+      .then(data => {
+        setSkills(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch skills:', err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div style={{ padding: '2rem' }}>
-      <h1>{content.title}</h1>
-      <p>{content.description}</p>
-      <SkillGrid skills={content.skills} />
+      <h1>Things I’ve Learned...</h1>
+      <p>A structured view of the technologies and concepts I’ve explored.</p>
+      {loading ? <p>Loading...</p> : <SkillGrid skills={skills} />}
     </div>
   );
 }

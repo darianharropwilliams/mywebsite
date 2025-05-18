@@ -1,3 +1,4 @@
+import React from 'react';
 import content from '../../data/home.json';
 import './Home.css';
 import { useState, useEffect } from 'react';
@@ -48,6 +49,7 @@ function Home() {
           <button onClick={() => window.location.href = '/projects/personal-website'}>About This Website</button>
         </div>
 
+        {window.innerWidth > 768 && (
         <section className="home-tenets">
           <h3>Engineer Mindset I Live By:</h3>
           <div className="tenets-pillars">
@@ -62,7 +64,7 @@ function Home() {
             <em>Inspired by <u>Thinking in Systems</u> by Donella Meadows</em>
           </p>
         </section>
-
+        )}
         {quotes.length > 0 && (
           <div className="quote-wrapper">
             <AnimatePresence mode="wait">

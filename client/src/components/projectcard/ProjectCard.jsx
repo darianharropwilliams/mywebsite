@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { preloadProject } from '../../utils/projectCache'; // 👈 preload helper
-import TechCard from '../techcard/TechCard'; // 👈 import TechCard
+import { preloadProject } from '../../utils/projectCache'; // preload helper
+import TechCard from '../techcard/TechCard'; // import TechCard
 import './ProjectCard.css';
 
-function ProjectCard({ title, summary, tech, image, slug }) {
+function ProjectCard({ title, summary, tech, slug }) {
   return (
     <div className="project-card">
-      {/* {image && <img src={image} alt={title} className="project-image" />} */}
       <div className="project-content">
         <h3>
           <Link to={`/projects/${slug}`} className="project-title-link">

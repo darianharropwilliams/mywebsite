@@ -25,22 +25,35 @@ function Bio() {
       </div>
 
       <section className="bio-section">
-        <h2>Current Focus</h2>
-        <div className="focus-columns">
-          <div>
-            <h4>Now</h4>
-            <ul>{bio.currentFocus.now.map((item, i) => <li key={i}>{item}</li>)}</ul>
-          </div>
-          <div>
-            <h4>Learning</h4>
-            <ul>{bio.currentFocus.learning.map((item, i) => <li key={i}>{item}</li>)}</ul>
-          </div>
-          <div>
-            <h4>Next Up</h4>
-            <ul>{bio.currentFocus.nextUp.map((item, i) => <li key={i}>{item}</li>)}</ul>
-          </div>
-        </div>
-      </section>
+  <h2>Current Focus</h2>
+  <div className="focus-columns">
+    <div className="focus-column">
+      <h4>Now</h4>
+      <div>
+        {bio.currentFocus.now.map((item, i) => (
+          <span key={i} className="focus-item">{item}</span>
+        ))}
+      </div>
+    </div>
+    <div className="focus-column">
+      <h4>Learning</h4>
+      <div>
+        {bio.currentFocus.learning.map((item, i) => (
+          <span key={i} className="focus-item">{item}</span>
+        ))}
+      </div>
+    </div>
+    <div className="focus-column">
+      <h4>Next Up</h4>
+      <div>
+        {bio.currentFocus.nextUp.map((item, i) => (
+          <span key={i} className="focus-item">{item}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }

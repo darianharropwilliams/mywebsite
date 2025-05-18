@@ -3,6 +3,7 @@ import { AppBar, Box, IconButton, Typography, Drawer, List, ListItem, ListItemTe
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation } from 'react-router-dom';
 import './Topbar.css';
+import { fetchSkills } from '../../utils/skillsCache';
 
 function Topbar() {
   const location = useLocation();
@@ -33,6 +34,9 @@ function Topbar() {
                 component={Link}
                 to={to}
                 className={`topbar-box ${location.pathname === to ? 'active' : ''}`}
+                onMouseEnter={() => {
+                  if (label === 'Skills') fetchSkills();
+                }}
               >
                 {label}
               </Box>

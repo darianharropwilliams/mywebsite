@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Box, Collapse, Paper } from '@mui/material';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -16,7 +17,7 @@ function Bottombar() {
       >
         {!open ? (
           <span className="bottombar-label">
-            Contact Me <ExpandLessIcon fontSize="small" />
+            Have a Question? Contact Me! <ExpandLessIcon fontSize="small" />
           </span>
         ) : (
           <ExpandMoreIcon fontSize="small" />

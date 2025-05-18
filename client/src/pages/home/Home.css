@@ -218,10 +218,12 @@
     margin-right: 0;
   }
 
-  .pillar-card {
+.pillar-card {
     width: 100%;
     max-width: 280px;
-  }
+    max-height: 320px; /* or whatever limit you want */
+    overflow: hidden;
+}
 
   .home-tags,
   .home-interests {

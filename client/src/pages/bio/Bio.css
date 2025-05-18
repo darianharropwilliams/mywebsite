@@ -39,24 +39,39 @@
   }
   
   .focus-columns {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .focus-columns div {
-    flex: 1 1 200px;
-  }
-  
-  .focus-columns div h4 {
-    margin-bottom: 0.25rem;
-  }
-  
-  .focus-columns li {
-    margin-bottom: 0.4rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.focus-column {
+  flex: 1 1 200px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.focus-column h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+}
+
+.focus-item {
+  background: #e3f2fd;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: gray;
+  font-weight: 500;
+}
+
   
   
   .bio-about {

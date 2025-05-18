@@ -26,6 +26,16 @@
     ],
     "achievements": "Ran 20+ CHIP-8 games in-browser with responsive controls and audio, demonstrating real-time WASM-C-JS interoperability.",
     "resume_bullet": "Developed a CHIP-8 emulator in C with a WebAssembly frontend, enabling real-time game emulation in the browser with keyboard and audio support.",
-    "story_mode": "I built a CHIP-8 emulator from scratch in C, then ported it to the web using WebAssembly. I handled everything from opcode execution to memory management and sound, then bridged the emulator to JavaScript for input, canvas rendering, and file loading. Watching classic games like Tetris and Pong run seamlessly in-browser was incredibly rewarding."
+    "story_mode": "I built a CHIP-8 emulator from scratch in C, then ported it to the web using WebAssembly. I handled everything from opcode execution to memory management and sound, then bridged the emulator to JavaScript for input, canvas rendering, and file loading. Watching classic games like Tetris and Pong run seamlessly in-browser was incredibly rewarding.",
+    "links": [
+    {
+      "label": "GitHub Repository",
+      "url": "https://github.com/darianharropwilliams/Chip-8_Emulator"
+    },
+    {
+      "label": "Live Demo",
+      "url": "/demos/chip8"
+    }
+  ]
   }
   

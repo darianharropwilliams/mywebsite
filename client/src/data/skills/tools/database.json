@@ -6,6 +6,12 @@
       "link": "https://www.mongodb.com/products/compass"
     },
     {
+      "title": "MongoDB Atlas",
+      "details": "A fully managed cloud database service for MongoDB, offering automated scaling, backups, monitoring, and secure deployment across cloud providers.",
+      "source": "Cloud database platform",
+      "link": "https://www.mongodb.com/atlas"
+    },
+    {
       "title": "pgAdmin",
       "details": "Open-source GUI tool for administering and querying PostgreSQL databases.",
       "source": "Used to manage and query Postgres databases in academic and backend projects",

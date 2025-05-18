@@ -1,50 +1,51 @@
 require('dotenv').config();
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-// const gameRoutes = require('./routes/games');
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+const cors = require('cors');
+
+// Route imports
 const blogRoutes = require('./routes/blog');
 const contactRoutes = require('./routes/contact');
+const projectRoutes = require('./routes/projectRoutes');
+const skillRoutes = require('./routes/skillRoutes');
 
 const app = express();
 
-// Middlewares
-app.use(bodyParser.json()); // For parsing application/json
+// Middleware
+app.use(helmet());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*', // Replace '*' with specific domain for better security
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
+app.use(bodyParser.json());
 
-
-const rateLimit = require('express-rate-limit');
-
+// Rate limiting
 const contactLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 1, // limit each IP to 1 request per window
+  windowMs: 1 * 60 * 1000,
+  max: 1,
   message: { message: 'Too many messages sent. Please try again later.' },
 });
 
-
-// Routes
-// app.use('/api', gameRoutes);    // All game-related routes
-app.use('/api', blogRoutes);    // All blog-related routes
-app.use('/api', contactRoutes); // For contact form and email handling
-app.use('/api/contact', contactLimiter);
-
-
-
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-  // remove deprecated options
-}).then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
   console.log("MongoDB connected");
 }).catch((err) => {
   console.error("MongoDB connection error:", err.message);
 });
 
-
-
-const projectRoutes = require('./routes/projectRoutes');
+// API routes
+app.use('/api', blogRoutes);
+app.use('/api', contactRoutes);
+app.use('/api/contact', contactLimiter);
 app.use('/api', projectRoutes);
+app.use('/api', skillRoutes);
 
-// Start the server
-app.listen(5000, () => {
-  console.log('Server running on http://localhost:5000');
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
