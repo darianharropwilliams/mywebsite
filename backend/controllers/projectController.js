@@ -5,7 +5,7 @@ const Project = require('../models/Project');
 // GET all project previews
 exports.getProjects = async (req, res) => {
   try {
-    const projects = await Project.find({}, 'slug title summary tech image date featured'); // Only select preview fields
+    const projects = await Project.find({}, 'slug title summary tech featured purpose');
     res.json(projects);
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch projects', error: err.message });
