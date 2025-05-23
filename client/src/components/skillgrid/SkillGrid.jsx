@@ -50,7 +50,6 @@ function SkillTypeSection({ type, skills }) {
             key={i}
             title={skill.title}
             details={skill.details}
-            source={skill.source}
           />
         ))}
       </div>
