@@ -81,4 +81,13 @@
     font-size: 1rem;
     line-height: 1.4;
   }
-  
+  .project-purpose-tag {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #222;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}

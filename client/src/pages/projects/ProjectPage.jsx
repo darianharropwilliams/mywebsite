@@ -43,6 +43,12 @@ function ProjectPage() {
     <div className="project-page">
       <h1>{project.title}</h1>
       {project.date && <p className="project-date">{project.date}</p>}
+      {project.purpose && (
+        <div className="project-purpose-tag">
+          {project.purpose}
+        </div>
+      )}
+
 
       {project.description && typeof project.description === 'object' ? (
         <StarSlider description={project.description} />

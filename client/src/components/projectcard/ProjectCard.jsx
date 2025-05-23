@@ -4,7 +4,7 @@ import { preloadProject } from '../../utils/projectCache'; // preload helper
 import TechCard from '../techcard/TechCard'; // import TechCard
 import './ProjectCard.css';
 
-function ProjectCard({ title, summary, tech, slug }) {
+function ProjectCard({ title, summary, tech, slug, purpose }) {
   return (
     <div className="project-card">
       <div className="project-content">
@@ -13,6 +13,12 @@ function ProjectCard({ title, summary, tech, slug }) {
             {title}
           </Link>
         </h3>
+        {purpose && (
+          <div className="project-purpose-tag">
+            {purpose}
+          </div>
+        )}
+
 
         <p className="project-summary">{summary}</p>
 
