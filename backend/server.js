@@ -19,11 +19,24 @@ console.log('[MIDDLEWARE] Applying Helmet');
 app.use(helmet());
 
 console.log('[MIDDLEWARE] Applying CORS');
+
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  process.env.DEV_URL,
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
+
 
 app.use(bodyParser.json());
 

@@ -47,7 +47,7 @@ function Home() {
         <p className="home-pitch">{content.pitch}</p>
         <p className="home-bio">{content.bio}</p>
         <FlagshipBanner 
-          projectTitle="Custom-Built CHIP-8 Virtual Computer"
+          projectTitle="Custom-Built CHIP-8 Virtual Computer and Game Center"
           projectSlug="chip8-emulator" 
           projectDemo="chip8" 
         />
