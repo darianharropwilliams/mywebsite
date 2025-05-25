@@ -40,9 +40,13 @@ function Bottombar() {
         onClick={toggleOpen}
       >
         {!open ? (
-          <span className={`bottombar-label ${bounce ? 'bounce-text' : ''}`}>
-            Have a Question? Contact Me! <ExpandLessIcon fontSize="small" />
+          <span className="bottombar-label">
+            <span className={bounce ? 'bounce-text' : ''}>
+              Have a Question? Contact Me!
+            </span>
+            <ExpandLessIcon fontSize="small" />
           </span>
+
         ) : (
           <ExpandMoreIcon fontSize="small" />
         )}

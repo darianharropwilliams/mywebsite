@@ -7,17 +7,22 @@
 }
 
 .bottombar-toggle {
+  height: 40px; /* set fixed height */
   width: 100%;
   text-align: center;
   background-color: #1976d2;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 0 0; /* no vertical padding */
   cursor: pointer;
   transition: background-color 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
-
 .bottombar-toggle:hover {
   background-color: #1565c0;
 }
@@ -26,6 +31,13 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  line-height: 1;
+  height: 100%; /* fill container */
+  will-change: transform;
+  contain: layout;
+}
+.bottombar-label svg {
+  vertical-align: middle;
 }
 
 .bottombar-paper {
@@ -50,17 +62,22 @@
     padding: 12px;
   }
 }
+
 @keyframes rubberBounce {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(-12px); }
-  40%  { transform: translateY(0); }
-  55%  { transform: translateY(-6px); }
-  70%  { transform: translateY(0); }
-  80%  { transform: translateY(-3px); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(-16px); }
+  30%  { transform: translateX(16px); }
+  45%  { transform: translateX(-12px); }
+  60%  { transform: translateX(12px); }
+  75%  { transform: translateX(-6px); }
+  90%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
 }
+
 
 .bounce-text {
   display: inline-block;
   animation: rubberBounce 0.8s ease-out;
+  white-space: nowrap;
+  vertical-align: middle; /* <-- this fixes the vertical shift */
 }
