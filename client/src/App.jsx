@@ -11,12 +11,14 @@ import Demos from './pages/demos/Demos.jsx';
 import Topbar from './components/topbar/Topbar.jsx';  // Topbar component for navigation
 import Bottombar from './components/bottombar/Bottombar.jsx';
 import Chip8Demo from './pages/demos/Chip8Demo';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Topbar />
+        <SpeedInsights />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bio" element={<Bio />} />
