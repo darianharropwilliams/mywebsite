@@ -1,7 +1,7 @@
-// ProjectPage.jsx
+// src/pages/ProjectPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getPreloadedProject } from '../../utils/projectCache';
+import { getPreloadedProject, preloadProject } from '../../utils/projectCache';
 import StarSlider from "../../components/star/StarSlider";
 import TechCard from "../../components/techcard/TechCard";
 import './ProjectPage.css';
@@ -13,27 +13,29 @@ function ProjectPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (project) {
-      return;
-    }
+    let isMounted = true;
 
-    async function fetchProject() {
+    async function loadProject() {
       try {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/${slug}`);
-        if (!res.ok) throw new Error('Project not found');
-        const data = await res.json();
-        setProject(data);
+        setLoading(true);
+        const fullProject = await preloadProject(slug);
+        if (isMounted) setProject(fullProject);
       } catch (err) {
         console.error('[ProjectPage] Error fetching project:', err);
-        setError(err.message || 'Unknown error');
+        if (isMounted) setError(err.message || 'Unknown error');
       } finally {
-        setLoading(false);
+        if (isMounted) setLoading(false);
       }
     }
 
-    fetchProject();
-  }, [slug, project]);
+    if (!project || !project.description || !project.tech || !project.links) {
+      loadProject();
+    } else {
+      setLoading(false);
+    }
 
+    return () => { isMounted = false; };
+  }, [slug]);
 
   if (loading) return <div className="project-loading">Loading...</div>;
   if (error) return <div className="project-error">Error: {error}</div>;
@@ -43,12 +45,7 @@ function ProjectPage() {
     <div className="project-page">
       <h1>{project.title}</h1>
       {project.date && <p className="project-date">{project.date}</p>}
-      {project.purpose && (
-        <div className="project-purpose-tag">
-          {project.purpose}
-        </div>
-      )}
-
+      {project.purpose && <div className="project-purpose-tag">{project.purpose}</div>}
 
       {project.description && typeof project.description === 'object' ? (
         <StarSlider description={project.description} />
