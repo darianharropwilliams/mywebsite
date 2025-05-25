@@ -12,6 +12,7 @@ import Topbar from './components/topbar/Topbar.jsx';  // Topbar component for na
 import Bottombar from './components/bottombar/Bottombar.jsx';
 import Chip8Demo from './pages/demos/Chip8Demo';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <div className="App">
         <Topbar />
         <SpeedInsights />
+        <Analytics />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bio" element={<Bio />} />
