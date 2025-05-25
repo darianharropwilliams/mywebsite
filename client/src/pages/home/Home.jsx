@@ -1,5 +1,6 @@
 import React from 'react';
 import content from '../../data/home.json';
+import FlagshipBanner from '../../components/flagship/FlagshipBanner';
 import './Home.css';
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -45,11 +46,18 @@ function Home() {
         {/* <p className="home-pride">{content.pride}</p> */}
         <p className="home-pitch">{content.pitch}</p>
         <p className="home-bio">{content.bio}</p>
+        <FlagshipBanner 
+          projectTitle="Custom-Built CHIP-8 Virtual Computer"
+          projectSlug="chip8-emulator" 
+          projectDemo="chip8" 
+        />
 
         <div className="home-cta">
-          <button onClick={() => window.location.href = '/projects'}>View Projects</button>
+          <p className="home-cta-info">Want to see more work like this?</p>
+          <button onClick={() => window.location.href = '/projects'}>Explore All Projects</button>
           <button onClick={() => window.location.href = '/projects/personal-website'}>About This Website</button>
         </div>
+
 
         {window.innerWidth > 768 && (
           <section className="home-tenets">

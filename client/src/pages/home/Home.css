@@ -237,6 +237,14 @@
     width: 90%;
     margin-right: 0;
   }
+  .home-cta-info {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  text-align: center;
+  font-weight: 500;
+}
+
 
 .pillar-card {
     width: 100%;
