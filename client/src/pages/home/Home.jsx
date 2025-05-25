@@ -4,6 +4,7 @@ import FlagshipBanner from '../../components/flagship/FlagshipBanner';
 import './Home.css';
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { preloadAllProjects, preloadProject } from '../../utils/projectCache';
 
 function Home() {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -54,8 +55,20 @@ function Home() {
 
         <div className="home-cta">
           <p className="home-cta-info">Want to see more work like this?</p>
-          <button onClick={() => window.location.href = '/projects'}>Explore All Projects</button>
-          <button onClick={() => window.location.href = '/projects/personal-website'}>About This Website</button>
+
+          <button
+            onMouseEnter={preloadAllProjects}
+            onClick={() => window.location.href = '/projects'}
+          >
+            Explore All Projects
+          </button>
+
+          <button
+            onMouseEnter={() => preloadProject('personal-website')}
+            onClick={() => window.location.href = '/projects/personal-website'}
+          >
+            About This Website
+          </button>
         </div>
 
 

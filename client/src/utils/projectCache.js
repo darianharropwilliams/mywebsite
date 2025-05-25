@@ -20,3 +20,25 @@ export async function preloadProject(slug) {
 export function getPreloadedProject(slug) {
   return projectCache.get(slug);
 }
+
+let allProjectsPreloaded = false;
+
+export async function preloadAllProjects() {
+  if (allProjectsPreloaded) return;
+
+  try {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/projects`);
+    if (!res.ok) throw new Error('Failed to preload all projects');
+    const projects = await res.json();
+
+    projects.forEach(project => {
+      if (!projectCache.has(project.slug)) {
+        projectCache.set(project.slug, project);
+      }
+    });
+
+    allProjectsPreloaded = true;
+  } catch (err) {
+    console.error('[projectCache] Error preloading all projects:', err);
+  }
+}

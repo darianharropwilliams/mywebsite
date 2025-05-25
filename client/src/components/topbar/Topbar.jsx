@@ -4,6 +4,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation } from 'react-router-dom';
 import './Topbar.css';
 import { fetchSkills } from '../../utils/skillsCache';
+import { preloadAllProjects } from '../../utils/projectCache';
+import { preloadBlogs } from '../../utils/blogCache'; // <- you'll create this file
 
 function Topbar() {
   const location = useLocation();
@@ -36,6 +38,8 @@ function Topbar() {
                 className={`topbar-box ${location.pathname === to ? 'active' : ''}`}
                 onMouseEnter={() => {
                   if (label === 'Skills') fetchSkills();
+                  if (label === 'Projects') preloadAllProjects();
+                  if (label === 'Blog') preloadBlogs();
                 }}
               >
                 {label}
