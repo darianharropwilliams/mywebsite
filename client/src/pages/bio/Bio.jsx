@@ -1,6 +1,6 @@
 import React from 'react';
 import './Bio.css';
-import bio from '../../data/bio/index.js';
+import bio from '../../data/bio.json';
 
 function Bio() {
   return (

@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the source code for my personal portfolio website, designed and developed from scratch to showcase my work, background, and technical capabilities. The site is live and fully functional, but this repository primarily exists for recruiters and collaborators to explore the code I’ve written behind it.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The site includes several interactive sections like a custom project showcase, blog, skills viewer, and a CHIP-8 emulator demo. It is a single-developer project built to be fast, responsive (desktop-first), and visually clean. All content, routing, state management, and animations are handcrafted rather than scaffolded from templates or site builders.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Frontend:**
+- React (w/ hooks and functional components)
+- React Router for routing
+- Framer Motion for animations
+- MUI (Material UI) for some components
+- Axios for API communication
+- ReCAPTCHA integration
+- Custom CSS (organized per-component)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend:**
+- Node.js with Express
+- MongoDB for dynamic content (projects, blog posts, skills)
+- RESTful API architecture
+- Helmet, CORS, and rate-limiting middleware for security and control
 
-### `npm test`
+**Other:**
+- WebAssembly for CHIP-8 emulator
+- Vercel for frontend hosting and analytics
+- Environment-based configuration for dev/prod separation
+- Modular project structure with lazy loading and prefetching logic
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Structure Overview
 
-### `npm run build`
+```
+.
+├── backend/                   # Backend API built with Express and MongoDB
+│   ├── config/                # Configuration files (e.g., DB connection)
+│   ├── controllers/           # Business logic for each route group
+│   ├── middlewares/           # Custom Express middleware (auth, logging, etc.)
+│   ├── models/                # Mongoose schemas defining data models
+│   ├── routes/                # Express route definitions (REST endpoints)
+│   ├── scripts/               # Migration/seeding scripts for MongoDB
+│   ├── services/              # Optional abstraction layer for business logic
+│   ├── utils/                 # Helper functions and utilities
+│   ├── package.json           # Backend dependencies and scripts
+│   └── server.js              # Main entry point for Express server
+│
+├── client/                    # Frontend React application
+│   ├── public/                # Static assets and public files
+│   │   └── wasm/chip8/        # CHIP-8 emulator WebAssembly + ROMs
+│   ├── src/                   # Application source code
+│   │   ├── components/        # Reusable UI components (e.g., cards, nav, forms)
+│   │   ├── data/              # Static JSON data (page titles, descriptions, links)
+│   │   ├── pages/             # Route-based React pages (Home, Blog, etc.)
+│   │   ├── utils/             # Frontend utilities (e.g., caching)
+│   │   ├── App.jsx            # App layout and React Router setup
+│   │   └── index.js           # React application entry point
+│   ├── package.json           # Frontend dependencies and scripts
+│   └── build/                 # Production-ready static output (auto-generated)
+│
+├── .gitignore                 # Git ignored files
+├── README.md                  # Project overview and usage
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Purpose
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is not intended for reuse or as a template. It’s a personal codebase demonstrating my ability to design, implement, and maintain a full-stack web application on my own. Feel free to browse and explore!

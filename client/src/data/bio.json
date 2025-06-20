@@ -7,20 +7,6 @@
     "Reads sci-fi and nonfiction books",
     "Loves puzzles, pickup games, and hands-on learning"
   ],
-  "pillars": [
-    {
-      "title": "Builder Mentality",
-      "description": "I enjoy designing systems from the ground up."
-    },
-    {
-      "title": "Systems Curiosity",
-      "description": "Whether it's memory layout, threading quirks, or browser WASM, I like understanding what’s underneath."
-    },
-    {
-      "title": "Consistent Growth",
-      "description": "I sharpen my skills through projects, reading, reflection, and by keeping an open mind."
-    }
-  ],
   "currentFocus": {
     "now": [
       "Studying for CompTIA Network+ Exam",
