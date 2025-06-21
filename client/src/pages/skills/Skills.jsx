@@ -22,7 +22,7 @@ function Skills() {
   return (
     <div style={{ padding: '2rem' }}>
       <h1>Things I’ve Learned...</h1>
-      <p>A structured view of the technologies and concepts I’ve explored.</p>
+      <p>A structured view of the technologies and concepts I’ve explored. Select a section to display the cards.</p>
       {loading ? <p>Loading...</p> : <SkillGrid skills={skills} />}
     </div>
   );

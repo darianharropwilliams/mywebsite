@@ -1,87 +1,106 @@
 /* ProjectPage.css */
+
+/* Container */
 .project-page {
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: 'Segoe UI', sans-serif;
-    color: #222;
-  }
-  
-  .project-page h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-page .project-date {
-    font-style: italic;
-    color: #888;
-    margin-bottom: 1.5rem;
-  }
-  
-  .project-page p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .project-page h3 {
-    margin-top: 2rem;
-    color: #333;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.3rem;
-  }
-  
-  .project-page ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-  
-  .project-page .tech-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  
-  .project-page .project-link-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.4rem 0.8rem;
-    background-color: #eef6ff;
-    color: #0077cc;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s;
-  }
-  
-  .project-page .project-link-button:hover {
-    background-color: #dbeeff;
-  }
-  
-  .project-page .external-icon {
-    margin-left: 0.3rem;
-  }
-  .list-section {
-    margin-top: 2rem;
-  }
-  
-  .list-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-top: 0.5rem;
-  }
-  
-  .list-item {
-    background-color: #f9f9f9;
-    border-left: 4px solid #0077cc;
-    padding: 0.75rem 1rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  .project-purpose-tag {
+  padding: 3rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading */
+.project-page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.project-page .project-date {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+/* Text */
+.project-page p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Section Headings */
+.project-page h3 {
+  margin-top: 2.5rem;
+  color: #0077cc;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+  font-size: 1.3rem;
+}
+
+/* Lists */
+.project-page ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Tech Grid */
+.project-page .tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Link Buttons */
+.project-page .project-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background-color: #eef6ff;
+  color: #0077cc;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.project-page .project-link-button:hover {
+  background-color: #d4eaff;
+}
+
+/* Icons */
+.project-page .external-icon {
+  margin-left: 0.3rem;
+}
+
+/* Section Block Lists */
+.list-section {
+  margin-top: 2rem;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.list-item {
+  background-color: #f9f9f9;
+  border-left: 4px solid #0077cc;
+  padding: 0.85rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Purpose Tag */
+.project-purpose-tag {
   display: inline-block;
   background-color: #ffc107;
   color: #222;
@@ -89,5 +108,86 @@
   font-weight: bold;
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Choice Hub */
+.choice-hub {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.choice-prompt {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.choice-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.choice-button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, #0077cc, #3399ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.choice-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Back Button */
+.back-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-button {
+  background: none;
+  border: 2px solid #0077cc;
+  color: #0077cc;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #0077cc;
+  color: white;
+}
+
+.back-to-projects {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  padding: 0.4rem 0.75rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  background-color: #f0f8ff;
+}
+
+.back-to-projects:hover {
+  background-color: #e0f0ff;
+  border-color: #0077cc;
+  color: #005fa3;
 }
