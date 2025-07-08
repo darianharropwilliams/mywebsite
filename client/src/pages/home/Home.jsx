@@ -24,13 +24,12 @@ function Home() {
     <div className="home-container">
       <div className="home-text">
         <h1>{content.title}</h1>
-        <h2 className="home-name">{content.name}</h2>
         <div className="home-social-links">
           <a href="https://www.linkedin.com/in/darian-harrop-williams-450098242/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} />
+            <FaLinkedin size={40} />
           </a>
           <a href="https://github.com/darianharropwilliams" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} />
+            <FaGithub size={40} />
           </a>
         </div>
 
