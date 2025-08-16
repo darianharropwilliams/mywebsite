@@ -9,16 +9,14 @@
   ],
   "currentFocus": {
     "now": [
-      "Studying for CompTIA Network+ Exam",
-      "Full-stack site improvements, performance & content updates"
+      "Building a Gameboy emulator",
+      "Implementing my own assembly language"
     ],
     "learning": [
-      "WASM optimization",
-      "Low-level OS theory",
-      "Frontend UX polish"
+      "OpenGL graphics rendering",
+      "Low-level virtual machine design"
     ],
     "nextUp": [
-      "ML-powered OS fingerprinting tool",
       "Multithreaded file search (grep) tool",
       "Logic boosted learning models"
     ]
